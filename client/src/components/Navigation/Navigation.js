@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
@@ -5,26 +6,26 @@ const Navigation = () => {
         <div className="container">
             <div className="row">
                 <nav className="navbar navbar-expand-lg narbar-light">
-                    <a className="navbar-brand mr-auto" href="#">
+                    <Link className="navbar-brand mr-auto" to="/">
                         <img src="img/logo.png" alt="Site logo" />
                         Journey
-                    </a>
+                    </Link>
                     <button type="button" id="nav-toggle" className="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                         <ul className="navbar-nav ml-auto">
                           <li className="nav-item">
-                            <a className="nav-link active" href="#top">Home <span className="sr-only">(current)</span></a>
+                            <Link className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#tm-section-2">Top Destinations</a>
+                            <Link className="nav-link" to="/destination">Top Destinations</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#tm-section-3">Recommended Places</a>
+                            <Link className="nav-link" to="/places">Recommended Places</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#tm-section-4">Contact Us</a>
+                            <Link className="nav-link" to="/contact">Contact Us</Link>
                         </li>
                     </ul>
                 </div>                            

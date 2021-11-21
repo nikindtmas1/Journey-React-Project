@@ -1,3 +1,4 @@
+import { Route, Switch } from 'react-router-dom';
 
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -13,10 +14,13 @@ function App() {
       <Navigation />
 
       <div className="tm-page-wrap mx-auto">
-        <Home />
-        <Destination />
-        <Places />
-        <Contact />
+        <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/home" component={Home} />
+        <Route path="/destination" component={Destination} />
+        <Route path="/places" component={Places} />
+        <Route path="/contact" component={Contact} />
+        </Switch>
         <Footer />
       </div>
     </div>
