@@ -1,40 +1,11 @@
 
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
-    <div class="tm-main-content" id="top">
+    <div className="tm-main-content" id="top">
             <div class="tm-top-bar-bg"></div>    
-            <div class="tm-top-bar" id="tm-top-bar">
-                <div class="container">
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="img/logo.png" alt="Site logo">
-                                Journey
-                            </a>
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-2">Top Destinations</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-3">Recommended Places</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-4">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>                            
-                    </nav>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- .tm-top-bar -->
+           <Navigation />
 
         <div class="tm-page-wrap mx-auto">
             <section class="tm-banner">
@@ -45,19 +16,19 @@ function App() {
                             <div class="col-xs-12">
                                 <div class="tm-banner-header">
                                     <h1 class="text-uppercase tm-banner-title">Let's begin</h1>
-                                    <img src="img/dots-3.png" alt="Dots">
+                                    <img src="img/dots-3.png" alt="Dots" />
                                     <p class="tm-banner-subtitle">We assist you to choose the best.</p>
                                     <a href="javascript:void(0)" class="tm-down-arrow-link"><i class="fa fa-2x fa-angle-down tm-down-arrow"></i></a>       
                                 </div>    
-                            </div>  <!-- col-xs-12 -->                      
-                        </div> <!-- row -->
+                            </div>                        
+                        </div> 
                         <div class="row tm-banner-row" id="tm-section-search">
 
                             <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
                                 <div class="form-row tm-search-form-row">                                
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="inputCity">Choose Your Destination</label>
-                                        <input name="destination" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                        <input name="destination" type="text" class="form-control" id="inputCity" placeholder="Type your destination..." />
                                     </div>
                                     <div class="form-group tm-form-group tm-form-group-1">                                    
                                         <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
@@ -107,16 +78,16 @@ function App() {
                                             </select>                                        
                                         </div>
                                     </div>
-                                </div> <!-- form-row -->
+                                </div> 
                                 <div class="form-row tm-search-form-row">
 
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="inputCheckIn">Check In Date</label>
-                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In" />
                                     </div>
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="inputCheckOut">Check Out Date</label>
-                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out" />
                                     </div>
                                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="btnSubmit">&nbsp;</label>
@@ -125,10 +96,10 @@ function App() {
                                 </div>                              
                             </form>                             
 
-                        </div> <!-- row -->
+                        </div> 
                         <div class="tm-banner-overlay"></div>
-                    </div>  <!-- .container -->                   
-                </div>     <!-- .tm-container-outer -->                 
+                    </div>                     
+                </div>                      
             </section>
 
             <section class="p-5 tm-container-outer tm-bg-gray">            
@@ -146,9 +117,9 @@ function App() {
             <div class="tm-container-outer" id="tm-section-2">
                 <section class="tm-slideshow-section">
                     <div class="tm-slideshow">
-                        <img src="img/tm-img-01.jpg" alt="Image">
-                        <img src="img/tm-img-02.jpg" alt="Image">
-                        <img src="img/tm-img-03.jpg" alt="Image">    
+                        <img src="img/tm-img-01.jpg" alt="Image" />
+                        <img src="img/tm-img-02.jpg" alt="Image" />
+                        <img src="img/tm-img-03.jpg" alt="Image" />    
                     </div>
                     <div class="tm-slideshow-description tm-bg-primary">
                         <h2 class="">Europe's most visited places</h2>
@@ -159,9 +130,9 @@ function App() {
                 <section class="clearfix tm-slideshow-section tm-slideshow-section-reverse">
 
                     <div class="tm-right tm-slideshow tm-slideshow-highlight">
-                        <img src="img/tm-img-02.jpg" alt="Image">
-                        <img src="img/tm-img-03.jpg" alt="Image">
-                        <img src="img/tm-img-01.jpg" alt="Image">
+                        <img src="img/tm-img-02.jpg" alt="Image" />
+                        <img src="img/tm-img-03.jpg" alt="Image" />
+                        <img src="img/tm-img-01.jpg" alt="Image" />
                     </div> 
 
                     <div class="tm-slideshow-description tm-slideshow-description-left tm-bg-highlight">
@@ -173,9 +144,9 @@ function App() {
                 </section>
                 <section class="tm-slideshow-section">
                     <div class="tm-slideshow">
-                        <img src="img/tm-img-03.jpg" alt="Image">
-                        <img src="img/tm-img-02.jpg" alt="Image">
-                        <img src="img/tm-img-01.jpg" alt="Image">
+                        <img src="img/tm-img-03.jpg" alt="Image" />
+                        <img src="img/tm-img-02.jpg" alt="Image" />
+                        <img src="img/tm-img-01.jpg" alt="Image" />
                     </div>
                     <div class="tm-slideshow-description tm-bg-primary">
                         <h2 class="">America's most famous places</h2>
@@ -188,54 +159,54 @@ function App() {
                 <ul class="nav nav-pills tm-tabs-links">
                     <li class="tm-tab-link-li">
                         <a href="#1a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/north-america.png" alt="Image" class="img-fluid">
+                            <img src="img/north-america.png" alt="Image" class="img-fluid" />
                             North America
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
                         <a href="#2a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/south-america.png" alt="Image" class="img-fluid">
+                            <img src="img/south-america.png" alt="Image" class="img-fluid" />
                             South America
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
                         <a href="#3a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/europe.png" alt="Image" class="img-fluid">
+                            <img src="img/europe.png" alt="Image" class="img-fluid" />
                             Europe
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
-                        <a href="#4a" data-toggle="tab" class="tm-tab-link active"><!-- Current Active Tab -->
-                            <img src="img/asia.png" alt="Image" class="img-fluid">
+                        <a href="#4a" data-toggle="tab" class="tm-tab-link active">
+                            <img src="img/asia.png" alt="Image" class="img-fluid" />
                             Asia
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
                         <a href="#5a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/africa.png" alt="Image" class="img-fluid">
+                            <img src="img/africa.png" alt="Image" class="img-fluid" />
                             Africa
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
                         <a href="#6a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/australia.png" alt="Image" class="img-fluid">
+                            <img src="img/australia.png" alt="Image" class="img-fluid" />
                             Australia
                         </a>
                     </li>
                     <li class="tm-tab-link-li">
                         <a href="#7a" data-toggle="tab" class="tm-tab-link">
-                            <img src="img/antartica.png" alt="Image" class="img-fluid">
+                            <img src="img/antartica.png" alt="Image" class="img-fluid" />
                             Antartica
                         </a>
                     </li>
                 </ul>
                 <div class="tab-content clearfix">
                 	
-                    <!-- Tab 1 -->
+                    
                     <div class="tab-pane fade" id="1a">
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">North Garden Resort</h3>
                                     <p class="tm-text-highlight">One North</p>
@@ -248,7 +219,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Felis nec dignissim</h3>
                                     <p class="tm-text-highlight">Two North</p>
@@ -262,7 +233,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Sed fermentum justo</h3>
                                     <p class="tm-text-highlight">Three North</p>
@@ -275,7 +246,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Maecenas ultricies neque</h3>
                                     <p class="tm-text-highlight">Four North</p>
@@ -289,14 +260,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->
-                    
-                    <!-- Tab 2 -->
+                    </div> 
+
                     <div class="tab-pane fade" id="2a">
 
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">South Resort Hotel</h3>
                                     <p class="tm-text-highlight">South One</p>
@@ -309,7 +279,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Aenean ac ante nec diam</h3>
                                     <p class="tm-text-highlight">South Second</p>
@@ -322,7 +292,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Suspendisse nec dapibus</h3>
                                     <p class="tm-text-highlight">South Third</p>
@@ -335,7 +305,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Aliquam viverra mi at nisl</h3>
                                     <p class="tm-text-highlight">South Fourth</p>
@@ -349,14 +319,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->          
-                    
-                    <!-- Tab 3 -->     
+                    </div> 
+
                     <div class="tab-pane fade" id="3a">
 
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Europe Hotel</h3>
                                     <p class="tm-text-highlight">Venecia, Italy</p>
@@ -369,7 +338,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">In viverra enim turpis</h3>
                                     <p class="tm-text-highlight">Paris, France</p>
@@ -382,7 +351,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Volutpat pellentesque</h3>
                                     <p class="tm-text-highlight">Barcelona, Spain</p>
@@ -395,7 +364,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Grand Resort Pasha</h3>
                                     <p class="tm-text-highlight">Istanbul, Turkey</p>
@@ -409,14 +378,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->
-                    
-                    <!-- Tab 4 -->
+                    </div> 
+
                     <div class="tab-pane fade show active" id="4a">
-                    <!-- Current Active Tab WITH "show active" classes in DIV tag -->
+                   
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Asia Resort Hotel</h3>
                                     <p class="tm-text-highlight">Singapore</p>
@@ -429,7 +397,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Nullam eget est a nisl</h3>
                                     <p class="tm-text-highlight">Yangon, Myanmar</p>
@@ -443,7 +411,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Proin interdum ullamcorper</h3>
                                     <p class="tm-text-highlight">Bangkok, Thailand</p>
@@ -456,7 +424,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Lorem ipsum dolor sit</h3>
                                     <p class="tm-text-highlight">Vientiane, Laos</p>
@@ -470,14 +438,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->
-                    
-                    <!-- Tab 5 -->
+                    </div> 
+
                     <div class="tab-pane fade" id="5a">
 
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Africa Resort Hotel</h3>
                                     <p class="tm-text-highlight">First City</p>
@@ -490,7 +457,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Aenean ac magna diam</h3>
                                     <p class="tm-text-highlight">Second City</p>
@@ -503,7 +470,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Beach Barbecue Sunset</h3>
                                     <p class="tm-text-highlight">Third City</p>
@@ -516,7 +483,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Grand Resort Pasha</h3>
                                     <p class="tm-text-highlight">Fourth City</p>
@@ -530,14 +497,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->   
-                    
-                    <!-- Tab 6 -->            
+                    </div> 
+
                     <div class="tab-pane fade" id="6a">
 
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Hotel Australia</h3>
                                     <p class="tm-text-highlight">City One</p>
@@ -550,7 +516,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Proin interdum ullamcorper</h3>
                                     <p class="tm-text-highlight">City Two</p>
@@ -563,7 +529,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Beach Barbecue Sunset</h3>
                                     <p class="tm-text-highlight">City Three</p>
@@ -576,7 +542,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Grand Resort Pasha</h3>
                                     <p class="tm-text-highlight">City Four</p>
@@ -590,14 +556,13 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->
-                    
-                    <!-- Tab 7 -->
+                    </div> 
+
                     <div class="tab-pane fade" id="7a">
 
                         <div class="tm-recommended-place-wrap">
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Antartica Resort</h3>
                                     <p class="tm-text-highlight">Ant City One</p>
@@ -610,7 +575,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Pulvinar Semper</h3>
                                     <p class="tm-text-highlight">Ant City Two</p>
@@ -623,7 +588,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Cras vel sapien</h3>
                                     <p class="tm-text-highlight">Ant City Three</p>
@@ -636,7 +601,7 @@ function App() {
                             </div>
 
                             <div class="tm-recommended-place">
-                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img">
+                                <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-recommended-img" />
                                 <div class="tm-recommended-description-box">
                                     <h3 class="tm-recommended-title">Nullam eget est</h3>
                                     <p class="tm-text-highlight">Ant City Four</p>
@@ -650,7 +615,7 @@ function App() {
                         </div>                        
 
                         <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-                    </div> <!-- tab-pane -->
+                    </div>
                 </div>
             </div>
 
@@ -671,7 +636,7 @@ function App() {
                     </div>
                     <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
                 </form>
-            </div> <!-- .tm-container-outer -->
+            </div>
 
             <footer class="tm-container-outer">
                 <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> Your Company 
