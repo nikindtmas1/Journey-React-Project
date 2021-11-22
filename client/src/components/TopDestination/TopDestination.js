@@ -1,9 +1,22 @@
+import { useState, useEffect } from 'react';
 import DestinationItem from "../DestinationItem/DestinationItem";
 
+import * as services from '../Services/data';
+
 const Destination = () => {
+    const [destinations, setDestination] = useState([]);
+
+    useEffect(() => {
+        services.getAll()
+        .then((result) => setDestination(result))
+    }, []);
     return (
         <div className="tm-container-outer" id="tm-section-2">
-            <DestinationItem />
+            { destinations.length > 0
+                ? destinations.map(x => <DestinationItem key={x._id} destination={x}/>)
+                : <h3 className="">No destinations yet</h3>
+            }
+            
         {/* <section className="clearfix tm-slideshow-section tm-slideshow-section-reverse">
 
             <div className="tm-right tm-slideshow tm-slideshow-highlight">
