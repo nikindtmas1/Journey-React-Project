@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Navigation from "./components/Navigation/Navigation";
 import Places from "./components/Places/Places";
 import Destination from "./components/TopDestination/TopDestination";
+import CreateDestination from './components/CreateDestination/CreateDestination';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/destination" component={Destination} />
         <Route path="/places" component={Places} />
         <Route path="/contact" component={Contact} />
+        <Route path="/addDestination" component={CreateDestination} />
         </Switch>
         <Footer />
       </div>
