@@ -19,7 +19,10 @@ const Navigation = () => {
                             <Link className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/destination">Top Destinations</Link>
+                            <Link className="nav-link" to="/destination">Destinations</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/AddDestination">Add Destinations</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/places">Recommended Places</Link>
