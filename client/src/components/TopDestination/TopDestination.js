@@ -5,8 +5,8 @@ const Destination = () => {
         <section className="tm-slideshow-section">
             <div className="tm-slideshow">
                 <img src="img/tm-img-01.jpg" alt="Image" />
-                <img src="img/tm-img-02.jpg" alt="Image" />
-                <img src="img/tm-img-03.jpg" alt="Image" />    
+                {/* <img src="img/tm-img-02.jpg" alt="Image" />
+                <img src="img/tm-img-03.jpg" alt="Image" />     */}
             </div>
             <div className="tm-slideshow-description tm-bg-primary">
                 <h2 className="">Europe's most visited places</h2>
@@ -14,7 +14,7 @@ const Destination = () => {
                 <a href="#" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
             </div>
         </section>
-        <section className="clearfix tm-slideshow-section tm-slideshow-section-reverse">
+        {/* <section className="clearfix tm-slideshow-section tm-slideshow-section-reverse">
 
             <div className="tm-right tm-slideshow tm-slideshow-highlight">
                 <img src="img/tm-img-02.jpg" alt="Image" />
@@ -40,7 +40,7 @@ const Destination = () => {
                 <p>Donec nec laoreet diam, at vehicula ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse nec dapibus nunc, quis viverra metus. Morbi eget diam gravida, euismod magna vel, tempor urna.</p>
                 <a href="#" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
             </div>
-        </section>
+        </section> */}
     </div> 
     );
 };

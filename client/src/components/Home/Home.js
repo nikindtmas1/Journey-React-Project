@@ -16,7 +16,7 @@ const Home = () => {
                                 </div>    
                             </div>                        
                         </div> 
-                        <div className="row tm-banner-row" id="tm-section-search">
+                        {/* <div className="row tm-banner-row" id="tm-section-search">
 
                             <form action="index.html" method="get" className="tm-search-form tm-section-pad-2">
                                 <div className="form-row tm-search-form-row">                                
@@ -90,7 +90,7 @@ const Home = () => {
                                 </div>                              
                             </form>                             
 
-                        </div> 
+                        </div>  */}
                         <div className="tm-banner-overlay"></div>
                     </div>                     
                 </div>                      
