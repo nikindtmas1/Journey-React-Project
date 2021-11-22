@@ -1,5 +1,24 @@
+import * as createDestination from '../Services/data';
 
-const CreateDestination = () => {
+const CreateDestination = ({
+    history
+}) => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(e.currentTarget);
+        let name = formData.get('name');
+        let description = formData.get('description');
+        let imgOne = formData.get('imgOne');
+        let imgTwo = formData.get('imgTwo');
+        let imgThree = formData.get('imgThree');
+
+        const data = { name, description, imgOne, imgTwo, imgThree }
+
+        createDestination.create(data)
+        .then(history.push('/destination'))
+    };
 
     return (
         <div className="tm-container-outer" id="tm-section-2">
@@ -9,7 +28,7 @@ const CreateDestination = () => {
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
             </div>
-                <form action="index.html" method="post" className="tm-contact-form">
+                <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
                     {/* <div className="form-group tm-name-container">
                     </div>
                     <div className="form-group tm-email-container">
