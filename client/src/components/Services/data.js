@@ -1,6 +1,7 @@
 import * as service from '../Services/destinationService';
 
 const host = 'http://localhost:3030';
+//const host = 'http://localhost:5000';
 service.settings.host = host;
 
 export async function getAll(){
