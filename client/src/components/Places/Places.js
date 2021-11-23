@@ -5,12 +5,14 @@ const Places = ({
   match
 }) => {
 
-  console.log(match.path);
+//  const onClickHandler = (e) => {
+//    e.preventDefault();
+//  }
     return (
         <div className="tm-container-outer" id="tm-section-3">
           <ul className="nav nav-pills tm-tabs-links">
             <li className="tm-tab-link-li">
-              <a href={`${match.path}/1a`} data-toggle="tab" className="tm-tab-link">
+              <a  href={`${match.path}/1a`} data-toggle="tab" className="tm-tab-link">
                 <img src="img/north-america.png" alt="Image" className="img-fluid" />
                 North America
               </a>
