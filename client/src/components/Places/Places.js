@@ -1,5 +1,6 @@
-import { Route } from 'react-router-dom';
-import FirstPlace from './Container/FirstPlace';
+import { Route, Link, Switch } from 'react-router-dom';
+import FirstPlace from './Container/First';
+import FourtPlace from './Container/Fourth';
 
 const Places = ({
   match
@@ -12,10 +13,10 @@ const Places = ({
         <div className="tm-container-outer" id="tm-section-3">
           <ul className="nav nav-pills tm-tabs-links">
             <li className="tm-tab-link-li">
-              <a  href={`${match.path}/1a`} data-toggle="tab" className="tm-tab-link">
+              <Link  to={`${match.path}/1a`} data-toggle="tab" className="tm-tab-link">
                 <img src="img/north-america.png" alt="Image" className="img-fluid" />
                 North America
-              </a>
+              </Link>
             </li>
             <li className="tm-tab-link-li">
               <a href="#2a" data-toggle="tab" className="tm-tab-link">
@@ -55,7 +56,11 @@ const Places = ({
             </li>
           </ul>
           <div className="tab-content clearfix">
-           <Route path={`${match.path}/1a`} component={FirstPlace} />
+
+            <Switch>
+              <Route path={`${match.path}/1a`} component={FirstPlace} />
+
+            </Switch>
 
             <div className="tab-pane fade" id="2a">
 
@@ -175,65 +180,7 @@ const Places = ({
               <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
             </div>
 
-            <div className="tab-pane fade show active" id="4a">
-
-              <div className="tm-recommended-place-wrap">
-                <div className="tm-recommended-place">
-                  <img src="img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
-                  <div className="tm-recommended-description-box">
-                    <h3 className="tm-recommended-title">Asia Resort Hotel</h3>
-                    <p className="tm-text-highlight">Singapore</p>
-                    <p className="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                  </div>
-                  <a href="#" className="tm-recommended-price-box">
-                    <p className="tm-recommended-price">$440</p>
-                    <p className="tm-recommended-price-link">Continue Reading</p>
-                  </a>
-                </div>
-
-                <div className="tm-recommended-place">
-                  <img src="img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
-                  <div className="tm-recommended-description-box">
-                    <h3 className="tm-recommended-title">Nullam eget est a nisl</h3>
-                    <p className="tm-text-highlight">Yangon, Myanmar</p>
-                    <p className="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                  </div>
-                  <div id="preload-hover-img"></div>
-                  <a href="#" className="tm-recommended-price-box">
-                    <p className="tm-recommended-price">$450</p>
-                    <p className="tm-recommended-price-link">Continue Reading</p>
-                  </a>
-                </div>
-
-                <div className="tm-recommended-place">
-                  <img src="img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
-                  <div className="tm-recommended-description-box">
-                    <h3 className="tm-recommended-title">Proin interdum ullamcorper</h3>
-                    <p className="tm-text-highlight">Bangkok, Thailand</p>
-                    <p className="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                  </div>
-                  <a href="#" className="tm-recommended-price-box">
-                    <p className="tm-recommended-price">$460</p>
-                    <p className="tm-recommended-price-link">Continue Reading</p>
-                  </a>
-                </div>
-
-                <div className="tm-recommended-place">
-                  <img src="img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
-                  <div className="tm-recommended-description-box">
-                    <h3 className="tm-recommended-title">Lorem ipsum dolor sit</h3>
-                    <p className="tm-text-highlight">Vientiane, Laos</p>
-                    <p className="tm-text-gray">Sed egestas, odio nec bibendum mattis, quam odio hendrerit risus, eu varius eros lacus sit amet lectus. Donec blandit luctus dictum...</p>
-                  </div>
-                  <a href="#" className="tm-recommended-price-box">
-                    <p className="tm-recommended-price">$470</p>
-                    <p className="tm-recommended-price-link">Continue Reading</p>
-                  </a>
-                </div>
-              </div>
-
-              <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
-            </div>
+           <FourtPlace />
 
             <div className="tab-pane fade" id="5a">
 
