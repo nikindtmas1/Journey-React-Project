@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -10,11 +11,32 @@ import CreateDestination from './components/CreateDestination/CreateDestination'
 import Login from './components/Login/Login';
 import Register from './components/Registration/Registration';
 
+import * as userServices from './components/Services/authService';
+
 function App() {
+
+  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
+
+  useEffect(() => {
+      let user = userServices.getUser();
+
+      setUserInfo({
+        isAuthenticated: Boolean(user),
+        user: user
+      })
+  }, []);
+
+  const onLogin = (username) => {
+    setUserInfo({
+      isAuthenticated: true,
+      user: username
+    });
+  };
+
   return (
     <div className="tm-main-content" id="top">
       <div className="tm-top-bar-bg"></div>
-      <Navigation />
+      <Navigation {...userInfo} />
 
       <div className="tm-page-wrap mx-auto">
         <Switch>

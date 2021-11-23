@@ -1,6 +1,20 @@
+import * as userService from '../Services/authService';
 
+const Login = ({
+    history
+}) => {
 
-const Login = () => {
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(e.currentTarget);
+        let name = formData.get('name');
+        let password = formData.get('password');
+
+       userService.login(name);
+
+        history.push('/');
+    };
     return (
         <div className="wrapper fadeInDown">
             <div id="formContent">
@@ -14,7 +28,7 @@ const Login = () => {
                 </div>
 
 
-                <form>
+                <form onSubmit={onSubmit} method="POST">
                     <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" />
                     <input type="text" id="password" className="fadeIn third" name="password" placeholder="password" />
                     <input type="submit" className="fadeIn fourth" value="Log In" />
