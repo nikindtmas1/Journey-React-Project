@@ -30,6 +30,7 @@ const Navigation = ({
     );
 
     let userNavigation = (
+        
         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
@@ -51,6 +52,8 @@ const Navigation = ({
                                 <Link className="nav-link" to="/logout">Logout</Link>
                                 </li>
                             </ul>
+                            <span>Welcome: {user}</span>
+
                         </div>
     );
 

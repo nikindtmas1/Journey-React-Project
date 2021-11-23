@@ -8,10 +8,10 @@ const Login = ({
         e.preventDefault();
 
         let formData = new FormData(e.currentTarget);
-        let name = formData.get('name');
+        let username = formData.get('name');
         let password = formData.get('password');
 
-       userService.login(name);
+       userService.login(username);
 
         history.push('/');
     };

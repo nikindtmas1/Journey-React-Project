@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import Contact from "./components/Contact/Contact";
@@ -46,8 +46,13 @@ function App() {
         <Route path="/places" component={Places} />
         <Route path="/contact" component={Contact} />
         <Route path="/addDestination" component={CreateDestination} />
-        <Route path='/login' component={Login} />
+        <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
+        <Route path="/logout" render={(props) => {
+            console.log('You are logged out!');
+            //props.history.push('/')
+            return <Redirect to='/' />
+          }} />
         </Switch>
         <Footer />
       </div>
