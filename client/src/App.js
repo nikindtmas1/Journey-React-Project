@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Places from "./components/Places/Places";
 import Destination from "./components/TopDestination/TopDestination";
 import CreateDestination from './components/CreateDestination/CreateDestination';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/places" component={Places} />
         <Route path="/contact" component={Contact} />
         <Route path="/addDestination" component={CreateDestination} />
+        <Route path='/login' component={Login} />
         </Switch>
         <Footer />
       </div>
