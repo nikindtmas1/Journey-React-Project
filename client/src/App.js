@@ -8,6 +8,7 @@ import Places from "./components/Places/Places";
 import Destination from "./components/TopDestination/TopDestination";
 import CreateDestination from './components/CreateDestination/CreateDestination';
 import Login from './components/Login/Login';
+import Register from './components/Registration/Registration';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
         </Switch>
         <Footer />
       </div>

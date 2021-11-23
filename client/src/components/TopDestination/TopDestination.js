@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import DestinationItem from "../DestinationItem/DestinationItem";
+import NotDestinations from '../DestinationItem/NotDestinations';
 
 import * as services from '../Services/data';
 
@@ -14,7 +15,7 @@ const Destination = () => {
         <div className="tm-container-outer" id="tm-section-2">
             { destinations.length > 0
                 ? destinations.map(x => <DestinationItem key={x._id} destination={x}/>)
-                : <h3 className="">No destinations yet</h3>
+                : <NotDestinations key="0000001"/>
             }
             
         {/* 
