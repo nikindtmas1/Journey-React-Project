@@ -17,6 +17,16 @@ export async function create(data){
 
 export async function getOne(id){
     let result = await service.get(host + `/journey/destinations/${id}`);
-    console.log(Object.values(result));
-    return Object.values(result);
+    return result;
 };
+
+export async function edit(id, data){
+    
+    const response = await service.put(host + `/journey/destinations/${id}`, data);
+   
+    return response
+}
+
+export async function deleteDestination(id){
+    return await service.del(host + `/journey/destinations/${id}`);
+}
