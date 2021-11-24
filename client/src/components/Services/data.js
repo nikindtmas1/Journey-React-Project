@@ -14,3 +14,9 @@ export async function create(data){
     return await service.post(host + '/journey/destinations', data);
 };
 //return await service.post(host + '/jsonstore/destinations', data);
+
+export async function getOne(id){
+    let result = await service.get(host + `/journey/destinations/${id}`);
+    console.log(Object.values(result));
+    return Object.values(result);
+};

@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Register from './components/Registration/Registration';
 
 import * as userServices from './components/Services/authService';
+import Details from './components/Details/Details';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/destination" component={Destination} />
+        <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/places" component={Places} />
         <Route path="/contact" component={Contact} />
         <Route path="/addDestination" component={CreateDestination} />
