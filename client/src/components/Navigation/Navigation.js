@@ -40,7 +40,7 @@ const Navigation = ({
                                     <Link className="nav-link" to="/destination">Destinations</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/addDestination">Add Destinations</Link>
+                                    <Link className="nav-link" to="/addDestination">Create Destinations</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/places">Recommended Places</Link>
