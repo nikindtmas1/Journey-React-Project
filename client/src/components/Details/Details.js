@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+
 
 import * as service from '../Services/data';
 
@@ -14,9 +14,12 @@ const Details = ({
         .then(result => setDestination(result))
     }, []);
 
-    const onDelete = () => {
+    const onDelete = async () => {
         console.log("delete");
-        Redirect(`/destination/${destination._id}`)
+        console.log(match.params.id);
+      await service.deleteDestination(match.params.id)
+
+
     }
 
     return (
@@ -30,7 +33,7 @@ const Details = ({
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
             <a href={`/destination/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</a>
-            <button onClick={onDelete} href="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</button>
+            <a onClick={onDelete} href="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</a>
         </div>
     </section>
     );
