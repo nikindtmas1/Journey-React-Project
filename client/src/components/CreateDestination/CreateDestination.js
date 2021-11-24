@@ -30,7 +30,7 @@ const CreateDestination = ({
             
                 <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
                     <div className="form-group">
-                        <input type="text" id="contact_name" className="form-control" value="create destination"  required/>
+                        <input type="text" id="contact_name" className="form-control" readOnly="create destination"  required/>
                     </div>
                     <div className="form-group">
                     <input type="text" id="contact_name" name="name" className="form-control" placeholder="Name"  required/>
