@@ -14,6 +14,7 @@ import Register from './components/Registration/Registration';
 import * as userServices from './components/Services/authService';
 import Details from './components/Details/Details';
 import EditDestination from './components/EditDestination/EditDestination';
+import FirstPlace from './components/Places/ContainerPlaces/First';
 
 
 function App() {
@@ -48,16 +49,16 @@ function App() {
         <Route path="/destination" component={Destination} />
         <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/edit/:id" component={EditDestination} />
-        <Route path="/places" component={Places} />
         <Route path="/contact" component={Contact} />
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
         <Route path="/logout" render={(props) => {
-            console.log('You are logged out!');
-            //props.history.push('/')
-            return <Redirect to='/' />
-          }} />
+          console.log('You are logged out!');
+          //props.history.push('/')
+          return <Redirect to='/' />
+        }} />
+        <Route path="/places" component={Places} />
         </Switch>
         <Footer />
       </div>
