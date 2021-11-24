@@ -1,7 +1,15 @@
 
 const DestinationItem = ({
-    destination 
+    destination,
+    history,
+    match 
 }) => {
+
+    // const onClick = (e) => {
+    //     e.preventDefault();
+
+    //     history.push(`/journey/destinations/${match.params.id}`)
+    // };
    
     return (
         <section className="tm-slideshow-section">
@@ -13,7 +21,7 @@ const DestinationItem = ({
         <div className="tm-slideshow-description tm-bg-primary">
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
-            <a href={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
+            <a  href={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
         </div>
     </section>
     );

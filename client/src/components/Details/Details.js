@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-
 import * as service from '../Services/data';
 
 const Details = ({
-    match
+    match,
+    history
 }) => {
     
     const [destination, setDestination] = useState({});
@@ -14,12 +14,11 @@ const Details = ({
         .then(result => setDestination(result))
     }, []);
 
-    const onDelete = async () => {
-        console.log("delete");
-        console.log(match.params.id);
+    const onDelete = async (e) => {
+        e.preventDefault();
       await service.deleteDestination(match.params.id)
 
-
+      history.push('/destination');
     }
 
     return (
