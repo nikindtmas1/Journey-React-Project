@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 const DestinationItem = ({
     destination,
@@ -21,7 +22,7 @@ const DestinationItem = ({
         <div className="tm-slideshow-description tm-bg-primary">
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
-            <a  href={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</a>
+            <Link  to={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</Link>
         </div>
     </section>
     );

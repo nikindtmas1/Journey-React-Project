@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import * as service from '../Services/data';
 
@@ -31,8 +32,8 @@ const Details = ({
         <div className="tm-slideshow-description tm-bg-primary">
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
-            <a href={`/destination/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</a>
-            <a onClick={onDelete} href="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</a>
+            <Link to={`/destination/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
+            <Link onClick={onDelete} to="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
         </div>
     </section>
     );
