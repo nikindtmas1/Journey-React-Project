@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const DestinationItem = ({
     destination,
     history,
     match 
 }) => {
-
+    const [count, setCount] = useState(0);
+    
     // const onClick = (e) => {
     //     e.preventDefault();
 
@@ -23,6 +25,10 @@ const DestinationItem = ({
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
             <Link  to={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</Link>
+            <button
+                type='button'
+                onClick={() => setCount((count) => count + 1)}
+            >Likes  {count}</button>
         </div>
     </section>
     );
