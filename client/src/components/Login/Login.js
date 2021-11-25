@@ -8,7 +8,7 @@ const Login = ({
         e.preventDefault();
 
         let formData = new FormData(e.currentTarget);
-        let username = formData.get('name');
+        let username = formData.get('username');
         let password = formData.get('password');
 
        userService.login(username);
@@ -29,7 +29,7 @@ const Login = ({
 
 
                 <form onSubmit={onSubmit} method="POST">
-                    <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" />
+                    <input type="text" id="login" className="fadeIn second" name="username" placeholder="login" />
                     <input type="text" id="password" className="fadeIn third" name="password" placeholder="password" />
                     <input type="submit" className="fadeIn fourth" value="Log In" />
                 </form>

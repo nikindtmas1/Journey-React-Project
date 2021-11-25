@@ -25,7 +25,7 @@ export const settings = {
     }
   }
   
-  function getOption(method = 'get',body){
+ async function getOption(method = 'get',body){
   
     const options = {
         method,
@@ -35,12 +35,33 @@ export const settings = {
         }
     }
   
-    // const token = sessionStorage.getItem('authToken');
+    const token = sessionStorage.getItem('authToken');
   
-    // if (token != null) {
-  
-    //     options.headers['X-Parse-Session-Token'] = token;
-    // }
+    if (token != null) {
+        const isValid = false;
+        let refreshToken = sessionStorage.getItem('refreshToken');
+        console.log(refreshToken);
+        if(!isValid){
+            let res = await fetch('http://localhost:5000/users/refresh', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    refreshToken
+                }),
+            });
+            let result = await res.json();
+
+            console.log(result);
+
+            sessionStorage.setItem('authToken', result.accessToken);
+            sessionStorage.setItem('refreshToken', result.refreshToken);
+
+            token = result.accessToken;
+        }
+        options.headers['X-Parse-Session-Token'] = token;
+    }
   
     if (body) {
         options.headers['Content-Type'] = 'application/json';
@@ -66,3 +87,35 @@ export const settings = {
   export async function del(url){
       return await request(url,getOption('delete'));
   }
+
+  export async function login(username, password) {
+    const result = await post(settings.host + '/users/login', { username, password });
+
+    sessionStorage.setItem('username', result.username);
+    sessionStorage.setItem('authToken', result.accessToken);
+    sessionStorage.setItem('refreshToken', result.refreshToken);
+    sessionStorage.setItem('userId', result._id);
+
+    return result;
+}
+
+export async function register(username, password) {
+    const result = await post(settings.host + '/users/register', { username, password });
+
+    sessionStorage.setItem('username', result.username);
+    sessionStorage.setItem('authToken', result.accessToken);
+    sessionStorage.setItem('refreshToken', result.refreshToken);
+    sessionStorage.setItem('userId', result._id);
+
+    return result;
+}
+
+export async function logout() {
+    const result = await get(settings.host + '/users/logout');
+
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('authToken');
+    sessionStorage.removeItem('userId');
+
+    return result;
+}
