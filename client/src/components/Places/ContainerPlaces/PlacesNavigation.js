@@ -10,13 +10,13 @@ const PlacesNavigation = () => {
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to="#2a" data-toggle="tab" className="tm-tab-link">
+              <Link to="/places/2a" data-toggle="tab" className="tm-tab-link">
                 <img src="img/south-america.png" alt="Image" className="img-fluid" />
                 South America
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to="#3a" data-toggle="tab" className="tm-tab-link">
+              <Link to="/places/3a" data-toggle="tab" className="tm-tab-link">
                 <img src="img/europe.png" alt="Image" className="img-fluid" />
                 Europe
               </Link>
@@ -28,19 +28,19 @@ const PlacesNavigation = () => {
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to="#5a" data-toggle="tab" className="tm-tab-link">
+              <Link to="/places/5a" data-toggle="tab" className="tm-tab-link">
                 <img src="img/africa.png" alt="Image" className="img-fluid" />
                 Africa
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to="#6a" data-toggle="tab" className="tm-tab-link">
+              <Link to="/places/6a" data-toggle="tab" className="tm-tab-link">
                 <img src="img/australia.png" alt="Image" className="img-fluid" />
                 Australia
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to="#7a" data-toggle="tab" className="tm-tab-link">
+              <Link to="/places/7a" data-toggle="tab" className="tm-tab-link">
                 <img src="img/antartica.png" alt="Image" className="img-fluid" />
                 Antartica
               </Link>

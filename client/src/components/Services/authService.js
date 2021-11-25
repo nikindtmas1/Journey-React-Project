@@ -8,3 +8,7 @@ export const getUser = () => {
 
     return username;
 };
+
+export const logout = () => {
+    localStorage.removeItem('username');
+};

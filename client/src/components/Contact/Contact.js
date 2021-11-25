@@ -11,7 +11,7 @@ const Contact = () => {
                
                 <form action="index.html" method="post" className="tm-contact-form">
                     <div className="form-group">
-                        <input type="text" id="contact_subject" className="form-control" readOnly="contact us"  required/>
+                        <input type="text" id="contact_subject" className="form-control" value="contact us"  required/>
                     </div>
                     <div className="form-group">
                         <input type="text" id="contact_subject" name="contact_name" className="form-control" placeholder="Name"  required/>

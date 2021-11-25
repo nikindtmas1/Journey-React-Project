@@ -15,6 +15,9 @@ import * as userServices from './components/Services/authService';
 import Details from './components/Details/Details';
 import EditDestination from './components/EditDestination/EditDestination';
 import FirstPlace from './components/Places/ContainerPlaces/First';
+import Demo from './components/Places/ContainerPlaces/Demo';
+import Logout from './components/Logout/Logout';
+
 
 
 function App() {
@@ -37,6 +40,13 @@ function App() {
     });
   };
 
+  const onLogout = () => {
+    setUserInfo({
+      isAuthenticated: false,
+      user: null
+    })
+  };
+
   return (
     <div className="tm-main-content" id="top">
       <div className="tm-top-bar-bg"></div>
@@ -53,12 +63,9 @@ function App() {
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
-        <Route path="/logout" render={(props) => {
-          console.log('You are logged out!');
-          //props.history.push('/')
-          return <Redirect to='/' />
-        }} />
+        <Route path="/logout" component={Logout} onLogout={onLogout} />
         <Route path="/places" component={Places} />
+
         </Switch>
         <Footer />
       </div>

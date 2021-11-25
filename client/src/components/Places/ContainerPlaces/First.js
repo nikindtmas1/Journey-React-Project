@@ -1,7 +1,7 @@
 
 
-const FirstPlace = () => {
-    return (
+const FirstPlace = 
+    (
         <div className="tab-pane fade" id="1a">
         <div className="tm-recommended-place-wrap">
           <div className="tm-recommended-place">
@@ -61,6 +61,6 @@ const FirstPlace = () => {
         <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
       </div>
     );
-};
+
 
 export default FirstPlace;

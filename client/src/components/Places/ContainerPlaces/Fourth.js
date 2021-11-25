@@ -1,6 +1,6 @@
 
-const FourtPlace = () => {
-    return (
+const FourtPlace = 
+  (
         <div className="tab-pane fade show active" id="4a">
 
         <div className="tm-recommended-place-wrap">
@@ -61,6 +61,6 @@ const FourtPlace = () => {
         <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
       </div>
     );
-};
+
 
 export default FourtPlace;
