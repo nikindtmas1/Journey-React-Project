@@ -9,6 +9,7 @@ const Details = ({
 }) => {
     
     const [destination, setDestination] = useState({});
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
         service.getOne(match.params.id)
@@ -20,7 +21,9 @@ const Details = ({
       await service.deleteDestination(match.params.id)
 
       history.push('/destination');
-    }
+    };
+
+   
 
     return (
         <section className="tm-slideshow-section">
@@ -34,6 +37,10 @@ const Details = ({
             <p>{destination.description}</p>
             <Link to={`/edit/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
             <Link onClick={onDelete} to="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
+            <button
+                type='button'
+                onClick={() => setCount((count) => count + 1)}
+            >Likes  {count}</button>
         </div>
     </section>
     );
