@@ -8,9 +8,9 @@ const Logout = ({
 
     authService.logout();
     onLogout();
-    history.push('/login')
+    // history.push('/login')
     return (
-      <Link to='/' />
+      <Link to='/login' replace={history.push('/login')} />
     );
 };
 

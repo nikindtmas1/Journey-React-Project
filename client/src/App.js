@@ -12,11 +12,11 @@ import Login from './components/Login/Login';
 import Register from './components/Registration/Registration';
 
 import * as userServices from './components/Services/authService';
+
 import Details from './components/Details/Details';
 import EditDestination from './components/EditDestination/EditDestination';
-import FirstPlace from './components/Places/ContainerPlaces/First';
-import Demo from './components/Places/ContainerPlaces/Demo';
 import Logout from './components/Logout/Logout';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 
@@ -65,7 +65,7 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path="/logout" component={Logout} onLogout={onLogout} />
         <Route path="/places" component={Places} />
-
+        <Route path='*' component={ErrorPage} />
         </Switch>
         <Footer />
       </div>
