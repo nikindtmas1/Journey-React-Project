@@ -21,8 +21,10 @@ export async function getOne(id){
 };
 
 export async function edit(id, data){
-    
+    console.log(id);
+    console.log(data);
     const response = await service.put(host + `/journey/destinations/${id}`, data);
+    console.log(response);
    
     return response
 }

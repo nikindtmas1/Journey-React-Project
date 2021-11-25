@@ -25,7 +25,7 @@ export const settings = {
     }
   }
   
- async function getOption(method = 'get',body){
+  function getOption(method = 'get',body){
   
     const options = {
         method,
@@ -35,33 +35,12 @@ export const settings = {
         }
     }
   
-    const token = sessionStorage.getItem('authToken');
+    // const token = sessionStorage.getItem('authToken');
   
-    if (token != null) {
-        const isValid = false;
-        let refreshToken = sessionStorage.getItem('refreshToken');
-        console.log(refreshToken);
-        if(!isValid){
-            let res = await fetch('http://localhost:5000/users/refresh', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    refreshToken
-                }),
-            });
-            let result = await res.json();
-
-            console.log(result);
-
-            sessionStorage.setItem('authToken', result.accessToken);
-            sessionStorage.setItem('refreshToken', result.refreshToken);
-
-            token = result.accessToken;
-        }
-        options.headers['X-Parse-Session-Token'] = token;
-    }
+    // if (token != null) {
+  
+    //     options.headers['X-Parse-Session-Token'] = token;
+    // }
   
     if (body) {
         options.headers['Content-Type'] = 'application/json';
