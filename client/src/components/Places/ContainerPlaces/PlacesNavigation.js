@@ -25,7 +25,7 @@ const PlacesNavigation = () => {
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/asia`} data-toggle="tab" className="tm-tab-link">
+              <Link to={`${url}/place4a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/asia.png" alt="Image" className="img-fluid" />
                 Asia
               </Link>
