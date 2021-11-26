@@ -13,20 +13,20 @@ export async function getAll(endUrl){
 };
 
 export async function create(data, endUrl){
-    return await placeServices.post(host +  `/journey/${endUrl}`, data);
+    return await placeServices.post(host +  `/journey${endUrl}`, data);
 };
 //return await service.post(host + '/jsonstore/destinations', data);
 
 export async function getOne(id, endUrl){
-    let result = await placeServices.get(host + `/journey/${endUrl}/${id}`);
+    let result = await placeServices.get(host + `/journey${endUrl}/${id}`);
     return result;
 };
 
 export async function edit(id,endUrl, data){
-    const response = await placeServices.put(host + `/journey/${endUrl}/${id}`, data);
+    const response = await placeServices.put(host + `/journey${endUrl}/${id}`, data);
     return response
 }
 
 export async function deleteDestination(id, endUrl){
-    return await placeServices.del(host + `/journey/${endUrl}/${id}`);
+    return await placeServices.del(host + `/journey${endUrl}/${id}`);
 }
