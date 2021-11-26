@@ -1,11 +1,11 @@
 
 const SecondPlace = () => {
     return (
-        <div className="tab-pane fade" id="2a">
+        <div className="tab-pane fade show active" id="2a">
 
               <div className="tm-recommended-place-wrap">
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">South Resort Hotel</h3>
                     <p className="tm-text-highlight">South One</p>
@@ -18,7 +18,7 @@ const SecondPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Aenean ac ante nec diam</h3>
                     <p className="tm-text-highlight">South Second</p>
@@ -31,7 +31,7 @@ const SecondPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Suspendisse nec dapibus</h3>
                     <p className="tm-text-highlight">South Third</p>
@@ -44,7 +44,7 @@ const SecondPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Aliquam viverra mi at nisl</h3>
                     <p className="tm-text-highlight">South Fourth</p>

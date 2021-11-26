@@ -1,11 +1,11 @@
 
-const FourtPlace = 
-  (
+const FourtPlace = () => {
+ return (
         <div className="tab-pane fade show active" id="4a">
 
         <div className="tm-recommended-place-wrap">
           <div className="tm-recommended-place">
-            <img src="img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Asia Resort Hotel</h3>
               <p className="tm-text-highlight">Singapore</p>
@@ -18,7 +18,7 @@ const FourtPlace =
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Nullam eget est a nisl</h3>
               <p className="tm-text-highlight">Yangon, Myanmar</p>
@@ -32,7 +32,7 @@ const FourtPlace =
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Proin interdum ullamcorper</h3>
               <p className="tm-text-highlight">Bangkok, Thailand</p>
@@ -45,7 +45,7 @@ const FourtPlace =
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Lorem ipsum dolor sit</h3>
               <p className="tm-text-highlight">Vientiane, Laos</p>
@@ -62,5 +62,5 @@ const FourtPlace =
       </div>
     );
 
-
+  }
 export default FourtPlace;

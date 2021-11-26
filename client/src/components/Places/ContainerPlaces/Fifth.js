@@ -3,11 +3,11 @@ import FirstPlace from "./First";
 
 const FifthPlace = () => {
     return (
-        <div className="tab-pane fade" id="5a">
+        <div className="tab-pane fade show active" id="5a">
 
               <div className="tm-recommended-place-wrap">
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Africa Resort Hotel</h3>
                     <p className="tm-text-highlight">First City</p>
@@ -20,7 +20,7 @@ const FifthPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Aenean ac magna diam</h3>
                     <p className="tm-text-highlight">Second City</p>
@@ -33,7 +33,7 @@ const FifthPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Beach Barbecue Sunset</h3>
                     <p className="tm-text-highlight">Third City</p>
@@ -46,7 +46,7 @@ const FifthPlace = () => {
                 </div>
 
                 <div className="tm-recommended-place">
-                  <img src="img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+                  <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Grand Resort Pasha</h3>
                     <p className="tm-text-highlight">Fourth City</p>

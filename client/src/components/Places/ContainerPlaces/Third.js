@@ -1,11 +1,11 @@
 
 const ThirdPlace = () => {
     return (
-        <div className="tab-pane fade" id="3a">
+        <div className="tab-pane fade show active" id="3a">
 
         <div className="tm-recommended-place-wrap">
           <div className="tm-recommended-place">
-            <img src="img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Europe Hotel</h3>
               <p className="tm-text-highlight">Venecia, Italy</p>
@@ -18,7 +18,7 @@ const ThirdPlace = () => {
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">In viverra enim turpis</h3>
               <p className="tm-text-highlight">Paris, France</p>
@@ -31,7 +31,7 @@ const ThirdPlace = () => {
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Volutpat pellentesque</h3>
               <p className="tm-text-highlight">Barcelona, Spain</p>
@@ -44,7 +44,7 @@ const ThirdPlace = () => {
           </div>
 
           <div className="tm-recommended-place">
-            <img src="img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
+            <img src="/img/tm-img-07.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Grand Resort Pasha</h3>
               <p className="tm-text-highlight">Istanbul, Turkey</p>
