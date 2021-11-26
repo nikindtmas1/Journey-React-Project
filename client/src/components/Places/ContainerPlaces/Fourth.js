@@ -7,9 +7,11 @@ const FourtPlace = ({
 }) => {
 
   const [places, setPlaces] = useState([]);
+  const lasturl = match.path.split('/')[2];
+    console.log(lasturl);
 
   useEffect(() => {
-      placesService.getAll(match.path)
+      placesService.getAll(lasturl)
       .then(result => setPlaces(result))
   }, []);
 

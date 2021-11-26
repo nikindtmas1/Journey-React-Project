@@ -9,6 +9,8 @@ const ThirdPlace = ({
 }) => {
     
     const [places, setPlaces] = useState([]);
+    // const lasturl = match.path.split('/')[2];
+    // console.log(lasturl);
 
     useEffect(() => {
        placeService.getAll(match.path)
