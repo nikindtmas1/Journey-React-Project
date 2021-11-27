@@ -485,7 +485,7 @@ footer p { color: white; }
 .tm-email-container { margin-left: 10px; }
 
 .tm-btn-send {
-    width: 100%;
+    width: 85%;
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
