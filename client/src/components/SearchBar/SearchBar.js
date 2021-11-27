@@ -1,10 +1,25 @@
+import { useState } from 'react';
 
+import * as service from '../Services/data';
 
 function SearchBar({
-    placeholder, data
+   
 }){
+
+   const [searchDes, setSearchDes] = useState([])
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+
+        let formData = new FormData(e.currentTarget);
+        let destination = formData.get('destination');
+        service.getAll()
+        .then(result => setSearchDes(result.filter(destination)))
+        console.log(searchDes);
+    };
+
     return(
-        <form action="index.html" method="get" className="tm-search-form tm-section-pad-2">
+        <form onSubmit={onSubmit} action="index.html" method="get" className="tm-search-form tm-section-pad-2">
                                 <div className="form-row tm-search-form-row">                                
                                     <div className="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="inputCity">Choose Your Destination</label>
