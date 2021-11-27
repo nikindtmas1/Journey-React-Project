@@ -24,7 +24,7 @@ const Login = ({
 
 
                 <div className="fadeIn first">
-                    <img src="/client/public/img/logo.png" id="icon" alt="User Icon" />
+                    <img src="/img/logo.png" id="icon" alt="User Icon" />
                 </div>
 
 

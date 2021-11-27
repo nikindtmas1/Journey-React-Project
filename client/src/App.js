@@ -10,6 +10,7 @@ import Destination from "./components/TopDestination/TopDestination";
 import CreateDestination from './components/CreateDestination/CreateDestination';
 import Login from './components/Login/Login';
 import Register from './components/Registration/Registration';
+import Demo from './components/Places/ContainerPlaces/Demo';
 
 import * as userServices from './components/Services/authService';
 
@@ -63,6 +64,7 @@ function App() {
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
+        <Demo path='/demo' component={Demo} />
         <Route path="/logout" component={Logout} onLogout={onLogout} />
         <Route path="/places" component={Places} />
         <Route path='*' component={ErrorPage} />
