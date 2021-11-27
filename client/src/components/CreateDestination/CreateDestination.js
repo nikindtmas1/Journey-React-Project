@@ -23,7 +23,7 @@ const CreateDestination = ({
     return (
         <div className="tm-container-outer" id="tm-section-2">
                 <div className="tm-slideshow">
-                <img src="img/tm-img-15.jpg" alt="Image" />
+                <img src="/img/tm-img-09.jpg" alt="Image" />
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
                 </div>

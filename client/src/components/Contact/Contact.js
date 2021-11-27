@@ -4,10 +4,10 @@ const Contact = () => {
         <>
         <div className="tm-container-outer tm-position-relative" id="tm-section-4">
                 <div className="tm-slideshow">
-                <img src="img/tm-img-08.jpg" alt="Image" />
+                <img src="/img/tm-img-09.jpg" alt="Image" />
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
-                </div>
+               
                
                 <form action="index.html" method="post" className="tm-contact-form">
                     <div className="form-group">
@@ -27,6 +27,8 @@ const Contact = () => {
                     </div>
                     <button type="submit" className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
                 </form>
+
+                </div>
             </div>
             </>
     );

@@ -39,7 +39,7 @@ const EditDestination = ({
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
             </div>
-                <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
+                <form onSubmit={handleSubmit} action="" method="POST" className="tm-contact-form">
                     {/* <div className="form-group tm-name-container">
                     </div>
                     <div className="form-group tm-email-container">

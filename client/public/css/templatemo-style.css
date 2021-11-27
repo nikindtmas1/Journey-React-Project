@@ -178,7 +178,7 @@ label { font-weight: 700; }
 .tm-form-group-1 { width: 50%; }
 .tm-form-group-2 { width: 50%; }
 .tm-form-group-3 { width: 25%; }
-.form-control { border-radius: 0; }
+.form-control { border-radius: 2; }
 
 .tm-btn {
     cursor: pointer;
@@ -459,9 +459,9 @@ footer p { color: white; }
 .tm-contact-form {
     background: white;
     width: 470px;
-    position: absolute;
+    position:fixed;
     top: 100px;
-    right: 100px;
+    right: 300px;
     padding: 20px;
     z-index: 1000;
 }

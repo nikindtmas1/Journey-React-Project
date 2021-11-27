@@ -61,10 +61,11 @@ function App() {
         <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/edit/:id" component={EditDestination} />
         <Route path="/contact" component={Contact} />
+        <Route path="/demo" component={Demo} />
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
-        <Demo path='/demo' component={Demo} />
+        {/* <Demo path='/demo' component={Demo} /> */}
         <Route path="/logout" component={Logout} onLogout={onLogout} />
         <Route path="/places" component={Places} />
         <Route path='*' component={ErrorPage} />
