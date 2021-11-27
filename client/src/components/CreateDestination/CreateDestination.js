@@ -23,20 +23,20 @@ const CreateDestination = ({
     return (
         <div className="tm-container-outer" id="tm-section-2">
                 <div className="tm-slideshow">
-                <img src="/img/tm-img-09.jpg" alt="Image" />
+                <img src="/img/tm-img-16.jpg" alt="Image" />
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
                 </div>
             
                 <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <input type="text" id="contact_name" className="form-control" value="create destination"  required/>
-                    </div>
+                    </div> */}
                     <div className="form-group">
                     <input type="text" id="contact_name" name="name" className="form-control" placeholder="Name"  required/>
                     </div>
                     <div className="form-group">
-                    <textarea id="contact_message" name="description" className="form-control" rows="3" placeholder="Description" required></textarea>
+                    <textarea id="contact_message" name="description" className="form-control" rows="5" placeholder="Description" required></textarea>
                     </div>
                     <div className="form-group">
                         <input type="text" id="contact_subject" name="imgOne" className="form-control" placeholder="Image One"  required/>

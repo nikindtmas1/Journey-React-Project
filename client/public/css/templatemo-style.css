@@ -163,17 +163,17 @@ select.tm-select.form-control:not([size]):not([multiple]) { height: 45px; }
     font-size: 0.8rem;
     padding: .75rem;
 }
-label { font-weight: 700; }
+label { font-weight: 500; }
 .tm-search-form {
     background-color: #f5f6f6;
     padding: 25px 25px 15px;
-    width: 100%;
+    width: 50%;
     max-width: 830px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.tm-form-group { float: left; }
+.tm-form-group { float:left; }
 .tm-form-group-pad { padding: 0 8px; }
 .tm-form-group-1 { width: 50%; }
 .tm-form-group-2 { width: 50%; }

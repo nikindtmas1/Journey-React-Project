@@ -8,9 +8,9 @@ function SearchBar({
                                 <div className="form-row tm-search-form-row">                                
                                     <div className="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="inputCity">Choose Your Destination</label>
-                                        <input name="destination" type="text" className="form-control" id="inputCity" placeholder="Type your destination..." />
+                                        <input name="destination" type="text" className="form-control" id="inputCity" placeholder="Type destination..." />
                                     </div>
-                                    <div className="form-group tm-form-group tm-form-group-1">                                    
+                                    {/* <div className="form-group tm-form-group tm-form-group-1">                                    
                                         <div className="form-group tm-form-group tm-form-group-pad tm-form-group-2">
                                             <label for="inputRoom">How many rooms?</label>
                                             <select name="room" className="form-control tm-select" id="inputRoom">
@@ -57,10 +57,10 @@ function SearchBar({
                                                 <option value="9">9</option>
                                             </select>                                        
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div> 
                                 <div className="form-row tm-search-form-row">
-
+{/* 
                                     <div className="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="inputCheckIn">Check In Date</label>
                                         <input name="check-in" type="text" className="form-control" id="inputCheckIn" placeholder="Check In" />
@@ -68,10 +68,10 @@ function SearchBar({
                                     <div className="form-group tm-form-group tm-form-group-pad tm-form-group-3">
                                         <label for="inputCheckOut">Check Out Date</label>
                                         <input name="check-out" type="text" className="form-control" id="inputCheckOut" placeholder="Check Out" />
-                                    </div>
+                                    </div> */}
                                     <div className="form-group tm-form-group tm-form-group-pad tm-form-group-1">
                                         <label for="btnSubmit">&nbsp;</label>
-                                        <button type="submit" className="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Check Availability</button>
+                                        <button type="submit" className="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Search</button>
                                     </div>
                                 </div>                              
                             </form>  
