@@ -1,4 +1,4 @@
-//import { useState } from 'react';
+
 import { useHistory } from 'react-router-dom';
 import * as service from '../Services/data';
 
@@ -6,7 +6,7 @@ function SearchBar({
    
 }){
     let history = useHistory()
-   //const [searchDes, setSearchDes] = useState([])
+ 
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -16,12 +16,9 @@ function SearchBar({
         service.getAll()
         .then(result => result.filter(x => x.name === destination))
         .then(currenSearch => history.push(`/journey/destinations/${currenSearch[0]._id}`))
-        //console.log(searchDes[0].name);
-
-        //let id = searchDes[0]._id
-        //history.push(`/journey/destinations/${currenSearch[0]._id}`)
+     
     };
-    //console.log(searchDes[0]._id)
+  
     return(
         <form onSubmit={onSubmit} action="index.html" method="get" className="tm-search-form tm-section-pad-2">
                                 <div className="form-row tm-search-form-row">                                
