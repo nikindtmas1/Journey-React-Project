@@ -13,11 +13,14 @@ function SearchBar({
 
         let formData = new FormData(e.currentTarget);
         let destination = formData.get('destination');
+        console.log(destination);
         service.getAll()
-        .then(result => setSearchDes(result.filter(destination)))
-        console.log(searchDes);
+        .then(result => result.filter(x => x.name === destination))
+        .then(currenSearch => setSearchDes(currenSearch))
+        
+        ;
     };
-
+    console.log(searchDes)
     return(
         <form onSubmit={onSubmit} action="index.html" method="get" className="tm-search-form tm-section-pad-2">
                                 <div className="form-row tm-search-form-row">                                
