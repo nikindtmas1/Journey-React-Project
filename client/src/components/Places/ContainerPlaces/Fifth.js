@@ -1,12 +1,24 @@
-import FirstPlace from "./First";
+import { useState, useEffect}  from 'react';
 
+import * as africaService from '../../Services/africaData';
+import PlaceItem from '../PlaceItem/PlaceItem';
 
 const FifthPlace = () => {
+
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    africaService.getAll()
+    .then(result => setPlaces(result))
+  },[]);
+
     return (
         <div className="tab-pane fade show active" id="5a">
 
               <div className="tm-recommended-place-wrap">
-                <div className="tm-recommended-place">
+
+                {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {/* <div className="tm-recommended-place">
                   <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Africa Resort Hotel</h3>
@@ -56,7 +68,7 @@ const FifthPlace = () => {
                     <p className="tm-recommended-price">$580</p>
                     <p className="tm-recommended-price-link">Continue Reading</p>
                   </a>
-                </div>
+                </div> */}
               </div>
 
               <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
