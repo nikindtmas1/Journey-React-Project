@@ -1,27 +1,27 @@
-// import { useState, useEffect } from 'react';
-// import PlaceItem from '../PlaceItem/PlaceItem';
-// import * as placesService from '../../Services/placesData';
+import { useState, useEffect } from 'react';
+import PlaceItem from '../PlaceItem/PlaceItem';
+import * as asiasService from '../../Services/asiasData';
 
 const FourtPlace = ({
   match
 }) => {
 
-  // const [places, setPlaces] = useState([]);
-  // const lasturl = match.path.split('/')[2];
-  //   console.log(lasturl);
+  const [places, setPlaces] = useState([]);
+  const lasturl = match.path.split('/')[2];
+    console.log(lasturl);
 
-  // useEffect(() => {
-  //     placesService.getAll(lasturl)
-  //     .then(result => setPlaces(result))
-  // }, []);
+  useEffect(() => {
+      asiasService.getAll()
+      .then(result => setPlaces(result))
+  }, []);
 
  return (
         <div className="tab-pane fade show active" id="4a">
 
         <div className="tm-recommended-place-wrap">
 
-          {/* {places.map(x => <PlaceItem key={x._id} place={x} />)} */}
-          <div className="tm-recommended-place">
+          {places.map(x => <PlaceItem key={x._id} place={x} />)}
+          {/* <div className="tm-recommended-place">
             <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">Asia Resort Hotel</h3>
@@ -72,7 +72,7 @@ const FourtPlace = ({
               <p className="tm-recommended-price">$470</p>
               <p className="tm-recommended-price-link">Continue Reading</p>
             </a>
-          </div>
+          </div> */}
         </div>
 
         <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
