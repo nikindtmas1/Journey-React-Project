@@ -1,12 +1,14 @@
+import { useHistory } from 'react-router-dom'
+
 import * as userService from '../Services/authService';
 
 const Login = ({
-    history
+  
 }) => {
+    let history = useHistory()
 
     const onSubmit = (e) => {
         e.preventDefault();
-
         let formData = new FormData(e.currentTarget);
         let username = formData.get('username');
         let password = formData.get('password');
