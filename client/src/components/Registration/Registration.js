@@ -9,15 +9,15 @@ const Register = () => {
         e.preventDefault()
 
         let formData = new FormData(e.currentTarget);
-        let username = formData.get('username');
-        let password = formData.get('password');
-        let rePass = formData.get('rePassword');
+        let username = formData.get('username').trim();
+        let password = formData.get('password').trim();
+        let rePass = formData.get('rePassword').trim();
 
         if(password !== rePass){
-            return history.push('/register');
+            return history.push('/');
         }
 
-        userService.register({username, password})
+        userService.register(username, password)
         .then(history.push('/login'));
 
     };
