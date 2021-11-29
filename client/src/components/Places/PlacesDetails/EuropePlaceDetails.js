@@ -22,7 +22,7 @@ const PlaceDetails = ({
               <p className="tm-text-gray">{currentPlace.gray}</p>
             </div>
             <a href={`/places/place3a`} className="tm-recommended-price-box">
-              {/* <p className="tm-recommended-price">{currentPlace.price}</p> */}
+              <p className="tm-recommended-price">{currentPlace.price}</p>
               <p className="tm-recommended-price-link">Back to places page</p>
             </a>
           </div>
