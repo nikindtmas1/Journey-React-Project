@@ -17,7 +17,7 @@ const Demo = ({
                         fontSize:'26px',
                         fontWeight:'500',
                         
-                        }}>Hello Demo Page</h1>
+                        }}>Create Place</h1>
                     <form>
                     <input placeholder='name' type='text' name='name' />
                     <input placeholder='place' type='text' name='place' />
