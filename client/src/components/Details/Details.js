@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import * as service from '../Services/data';
 
 const Details = ({
     match,
-    history
+    // history
 }) => {
+    
+    let history = useHistory();
     
     const [destination, setDestination] = useState({});
     

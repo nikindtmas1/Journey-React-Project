@@ -7,6 +7,7 @@ import FifthPlace from './ContainerPlaces/Fifth';
 import SixthPlace from './ContainerPlaces/SixthPlace';
 import SeventhPlace from './ContainerPlaces/SeventhPlace';
 
+
 import PlacesNavigation from './ContainerPlaces/PlacesNavigation';
 //import Demo from './ContainerPlaces/Demo';
 

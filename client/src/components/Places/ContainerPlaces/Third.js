@@ -27,7 +27,7 @@ const ThirdPlace = ({
           
         </div>
 
-        <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
+        {/* <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a> */}
       </div>
     );
 };

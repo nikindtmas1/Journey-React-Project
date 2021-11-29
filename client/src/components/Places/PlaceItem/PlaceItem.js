@@ -14,7 +14,7 @@ const PlaceItem = ({
               <p className="tm-text-highlight">{place.highlight}</p>
               <p className="tm-text-gray">{place.gray}</p>
             </div>
-            <a href="#" className="tm-recommended-price-box">
+            <a href={`/journey/africas/${place._id}`} className="tm-recommended-price-box">
               <p className="tm-recommended-price">{place.price}</p>
               <p className="tm-recommended-price-link">Continue Reading</p>
             </a>
