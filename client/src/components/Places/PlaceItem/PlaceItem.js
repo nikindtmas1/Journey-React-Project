@@ -1,12 +1,24 @@
-
+import { Link, useRouteMatch } from 'react-router-dom';
 
 const PlaceItem = ({
-    place
+    place,
+    match
 }) => {
 
+  const path = useRouteMatch();
   
+  let url = '/';
 
+  if(path.path == '/places/place5a'){
+    url = `/journey/africas/${place._id}`
+  }else if(path.path == '/places/place4a'){
+    url = `/journey/asias/${place._id}`
+  }else if (path.path == '/places/place3a'){
+    url = `/journey/places/${place._id}`
+  }
+//console.log(match.path);
     return (
+      
         <div className="tm-recommended-place">
             <img src={place.imgUrl} alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
@@ -14,10 +26,10 @@ const PlaceItem = ({
               <p className="tm-text-highlight">{place.highlight}</p>
               <p className="tm-text-gray">{place.gray}</p>
             </div>
-            <a href={`/journey/africas/${place._id}`} className="tm-recommended-price-box">
+            <Link to={`${url}`} className="tm-recommended-price-box">
               <p className="tm-recommended-price">{place.price}</p>
               <p className="tm-recommended-price-link">Continue Reading</p>
-            </a>
+            </Link>
           </div>
     );
 };
