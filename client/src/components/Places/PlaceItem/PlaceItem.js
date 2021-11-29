@@ -14,7 +14,7 @@ const PlaceItem = ({
   }else if(path.path == '/places/place4a'){
     url = `/journey/asias/${place._id}`
   }else if (path.path == '/places/place3a'){
-    url = `/journey/places/${place._id}`
+    url = `/journey/places/place3a/${place._id}`
   }
 //console.log(match.path);
     return (

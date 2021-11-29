@@ -13,6 +13,7 @@ import Register from './components/Registration/Registration';
 import Demo from './components/Places/ContainerPlaces/Demo';
 import AfricaPlaceDetails from './components/Places/PlacesDetails/AfricaPlaceDetails';
 import AsiaPlaceDetails from './components/Places/PlacesDetails/AsiaPlaceDetails';
+import EuropePlacesDetails from './components/Places/PlacesDetails/EuropePlaceDetails';
 
 
 import * as userServices from './components/Services/authService';
@@ -73,6 +74,7 @@ function App() {
         <Route path="/places" component={Places} />
         <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
         <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />
+        <Route path={`/journey/places/place3a/:id`} component={EuropePlacesDetails} />
         <Route path='*' component={ErrorPage} />
         </Switch>
         <Footer />
