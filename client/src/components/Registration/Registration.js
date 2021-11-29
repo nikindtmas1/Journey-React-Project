@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 
-import * as userService from '../Services/destinationService';
+import * as userService from '../Services/data';
 
 const Register = () => {
     let history = useHistory();
@@ -37,7 +37,7 @@ const Register = () => {
 
 
                 <form onSubmit={onSubmit}>
-                    <input type="text" id="login" className="fadeIn second" name="username" placeholder="register" />
+                    <input type="text" id="login" className="fadeIn second" name="username" placeholder="username" />
                     <input type="text" id="password" className="fadeIn third" name="password" placeholder="password" />
                     <input type="text" id="password" className="fadeIn third" name="rePassword" placeholder="repete password" />
                     <input type="submit" className="fadeIn fourth" value="Sign Up" />

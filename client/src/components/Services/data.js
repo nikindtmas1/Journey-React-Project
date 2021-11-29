@@ -4,6 +4,10 @@ import * as service from '../Services/destinationService';
 const host = 'http://localhost:5000';
 service.settings.host = host;
 
+export const login = service.login;
+export const register = service.register;
+export const logout = service.logout;
+
 export async function getAll(){
     let destinations = await service.get(host + '/journey/destinations');
     let result = Object.values(destinations);
