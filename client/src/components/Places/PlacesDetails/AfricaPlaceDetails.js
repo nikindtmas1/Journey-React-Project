@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import * as africaServices from '../../Services/africaData';
 
@@ -20,10 +21,10 @@ const PlaceDetails = ({
               <p className="tm-text-highlight">{currentPlace.highlight}</p>
               <p className="tm-text-gray">{currentPlace.gray}</p>
             </div>
-            <a href={`/places/place5a`} className="tm-recommended-price-box">
+            <Link to={`/places/place5a`} className="tm-recommended-price-box">
               <p className="tm-recommended-price">{currentPlace.price}</p>
               <p className="tm-recommended-price-link">Back to places page</p>
-            </a>
+            </Link>
           </div>
     );
 };
