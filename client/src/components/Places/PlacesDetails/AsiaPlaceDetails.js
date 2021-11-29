@@ -17,7 +17,7 @@ const PlaceDetails = ({
 
     const onDelete = async (e) => {
         e.preventDefault();
-        //await africaServices.deleteDestination(match.params.id)
+       
         await asiaServices.deleteDestination(match.params.id);
   
         history.push('/places/place4a');
