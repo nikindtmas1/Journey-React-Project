@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, useRouteMatch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import Contact from "./components/Contact/Contact";
@@ -52,6 +52,8 @@ function App() {
     })
   };
 
+  let path = useRouteMatch();
+
   return (
     <div className="tm-main-content" id="top">
       <div className="tm-top-bar-bg"></div>
@@ -65,7 +67,7 @@ function App() {
         <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/edit/:id" component={EditDestination} />
         <Route path="/contact" component={Contact} />
-        <Route path="/demo" component={Demo} />
+        <Route path={`/demo${path.path}`} ><Demo url={`/demo${path.path}`}/></Route>
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />

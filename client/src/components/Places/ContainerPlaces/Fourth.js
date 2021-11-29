@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link ,useRouteMatch } from 'react-router-dom';
+
 import PlaceItem from '../PlaceItem/PlaceItem';
 import * as asiasService from '../../Services/asiasData';
 
@@ -7,17 +9,16 @@ const FourtPlace = ({
 }) => {
 
   const [places, setPlaces] = useState([]);
-  const lasturl = match.path.split('/')[2];
-    console.log(lasturl);
 
   useEffect(() => {
       asiasService.getAll()
       .then(result => setPlaces(result))
   }, []);
+  let path = useRouteMatch();
 
  return (
         <div className="tab-pane fade show active" id="4a">
-
+          <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
         <div className="tm-recommended-place-wrap">
 
           {places.map(x => <PlaceItem key={x._id} place={x} />)}
@@ -75,7 +76,7 @@ const FourtPlace = ({
           </div> */}
         </div>
 
-        {/* <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a> */}
+        
       </div>
     );
 

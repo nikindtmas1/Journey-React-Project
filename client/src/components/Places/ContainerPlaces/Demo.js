@@ -1,12 +1,15 @@
+import { useRouteMatch } from 'react-router-dom';
+
 import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography'
 import { fontSize } from '@mui/system';
 
 
 const Demo = ({
-
+url
 }) => {
-
+    let path = useRouteMatch();
+    console.log(url);
 
     return (
         <Typography className='dm-com'>
