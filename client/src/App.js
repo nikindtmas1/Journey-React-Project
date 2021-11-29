@@ -67,7 +67,7 @@ function App() {
         <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/edit/:id" component={EditDestination} />
         <Route path="/contact" component={Contact} />
-        <Route path={`/demo${path.path}`} ><Demo url={`/demo${path.path}`}/></Route>
+        <Route path={`/demo${path.path}`} component={Demo} />
         <Route path="/addDestination" component={CreateDestination} />
         <Route path='/login' component={Login} onLogin={onLogin} />
         <Route path='/register' component={Register} />
