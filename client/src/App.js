@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Register from './components/Registration/Registration';
 import Demo from './components/Places/ContainerPlaces/Demo';
 import AfricaPlaceDetails from './components/Places/PlacesDetails/AfricaPlaceDetails';
+import AsiaPlaceDetails from './components/Places/PlacesDetails/AsiaPlaceDetails';
 
 
 import * as userServices from './components/Services/authService';
@@ -71,6 +72,7 @@ function App() {
         <Route path="/logout" component={Logout} onLogout={onLogout} />
         <Route path="/places" component={Places} />
         <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
+        <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />
         <Route path='*' component={ErrorPage} />
         </Switch>
         <Footer />
