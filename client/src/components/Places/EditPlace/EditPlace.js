@@ -25,15 +25,7 @@ const EditPlace = ({
    
     const [currentPlace, setCurrentPlace] = useState([]);
 
-    // let service;
-
-    // if (urlPlace.includes('place4a')) {
-    //     service = asiaService;
-    // }else if(urlPlace.includes('place5a')){
-    //     service = africaService;
-    // }else if(urlPlace.includes('place3a')){
-    //     service = europeService;
-    // }
+   
 
     useEffect(() => {
 
@@ -56,8 +48,7 @@ const EditPlace = ({
             northAmericaService.getOne(id)
             .then(result => setCurrentPlace(result))
         }
-            // service.getOne(id)
-            // .then(result => setCurrentPlace(result))
+           
         
     }, []);
 
