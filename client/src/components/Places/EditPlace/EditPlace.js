@@ -9,7 +9,7 @@ import * as africaService from '../../Services/africaData';
 import * as europeService from '../../Services/placesData';
 import * as southAmericaService from '../../Services/southAmericaData';
 import * as northAmericaService from '../../Services/northAmericaData';
-
+import * as australiaService from '../../Services/australiaData';
 
 
 const EditPlace = ({
@@ -37,11 +37,14 @@ const EditPlace = ({
 
     useEffect(() => {
 
-        if (urlPlace.includes('place4a')) {
-            asiaService.getOne(id)
+        if(urlPlace.includes('place6a')){
+            australiaService.getOne(id)
             .then(result => setCurrentPlace(result))
-        }else if(urlPlace.includes('place5a')){
+        }else if (urlPlace.includes('place5a')) {
             africaService.getOne(id)
+            .then(result => setCurrentPlace(result))
+        }else if(urlPlace.includes('place4a')){
+            asiaService.getOne(id)
             .then(result => setCurrentPlace(result))
         }else if(urlPlace.includes('place3a')){
             europeService.getOne(id, '/places/place3a')
@@ -70,14 +73,19 @@ const EditPlace = ({
 
         let data = { title, highlight, imgUrl, price, gray }
 
-        if(urlPlace.includes('place4a')){
-            asiaService.edit(id, data)
+        if(urlPlace.includes('place6a')){
+            australiaService.edit(id, data)
+            .then(history.push(`/places/${urlPlace[2]}`))
+        }
+
+        if(urlPlace.includes('place5a')){
+            africaService.edit(id, data)
         .then(history.push(`/places/${urlPlace[2]}`));
 
         }
         
-        if(urlPlace.includes('place5a')){
-           africaService.edit(id, data)
+        if(urlPlace.includes('place4a')){
+            asiaService.edit(id, data)
         .then(history.push(`/places/${urlPlace[2]}`));
 
         }
@@ -106,7 +114,7 @@ const EditPlace = ({
                     fontSize: '26px',
                     fontWeight: '500',
 
-                }}>Create Place</h1>
+                }}>Edit Place</h1>
                 <form onSubmit={onSubmit}>
                     <input  type='text' name='title' defaultValue={currentPlace.title} />
                     <input  type='text' name='highlight' defaultValue={currentPlace.highlight} />

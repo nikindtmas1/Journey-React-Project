@@ -9,7 +9,9 @@ const PlaceItem = ({
   
   let url = '/';
 
-  if(path.path == '/places/place5a'){
+  if(path.path == '/places/place6a'){
+    url = `/journey/australias/${place._id}`
+  }else if(path.path == '/places/place5a'){
     url = `/journey/africas/${place._id}`
   }else if(path.path == '/places/place4a'){
     url = `/journey/asias/${place._id}`
