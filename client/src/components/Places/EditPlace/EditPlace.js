@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 
 import * as asiaService from '../../Services/asiasData';
+import * as africaService from '../../Services/africaData';
+import * as europeService from '../../Services/placesData';
 
 
 const EditPlace = ({
@@ -24,6 +26,10 @@ const EditPlace = ({
 
     if (urlPlace.includes('place4a')) {
         service = asiaService;
+    }else if(urlPlace.includes('place5a')){
+        service = africaService;
+    }else if(urlPlace.includes('place3a')){
+        service = europeService;
     }
 
     useEffect(() => {
@@ -46,7 +52,7 @@ const EditPlace = ({
         let data = { title, highlight, imgUrl, price, gray }
 
         service.edit(id, data)
-        .then(history.push('/places/place4a'))
+        .then(history.push(`/places/${urlPlace[2]}`))
     }
     return (
         <Typography className='dm-com'>
