@@ -3,6 +3,8 @@ import * as placeService from '../../Services/placesData';
 import * as asiaService from '../../Services/asiasData';
 import * as africaService from '../../Services/africaData';
 import * as soutAmericaService from '../../Services/southAmericaData';
+import * as northAmericaService from '../../Services/northAmericaData';
+
 import { Button } from '@mui/material';
 
 import { Container } from '@mui/material';
@@ -41,6 +43,9 @@ const Demo = ({
         }else if(location.pathname == '/demo/places/place2a'){
             soutAmericaService.create(data)
             .then(history.push('/places/place2a'))
+        }else if(location.pathname == '/demo/places/place1a'){
+            northAmericaService.create(data)
+            .then(history.push('/places/place1a'))
         }
 
     }

@@ -15,6 +15,7 @@ import AfricaPlaceDetails from './components/Places/PlacesDetails/AfricaPlaceDet
 import AsiaPlaceDetails from './components/Places/PlacesDetails/AsiaPlaceDetails';
 import EuropePlacesDetails from './components/Places/PlacesDetails/EuropePlaceDetails';
 import SouthAmericaDetails from './components/Places/PlacesDetails/SouthAmericaDetails';
+import NorthAmericaDetails from './components/Places/PlacesDetails/NorthAmericaDetails';
 
 
 import * as userServices from './components/Services/authService';
@@ -82,6 +83,7 @@ function App() {
         <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />
         <Route path={`/journey/places/place3a/:id`} component={EuropePlacesDetails} />
         <Route path={`/journey/southAmericas/:id`} component={SouthAmericaDetails} />
+        <Route path={`/journey/northAmericas/:id`} component={NorthAmericaDetails} />
         <Route path='*' component={ErrorPage} />
         </Switch>
         <Footer />

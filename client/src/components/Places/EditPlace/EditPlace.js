@@ -8,6 +8,7 @@ import * as asiaService from '../../Services/asiasData';
 import * as africaService from '../../Services/africaData';
 import * as europeService from '../../Services/placesData';
 import * as southAmericaService from '../../Services/southAmericaData';
+import * as northAmericaService from '../../Services/northAmericaData';
 
 
 
@@ -48,6 +49,9 @@ const EditPlace = ({
         }else if (urlPlace.includes('place2a')){
             southAmericaService.getOne(id)
             .then(result => setCurrentPlace(result))
+        }else if(urlPlace.includes('place1a')){
+            northAmericaService.getOne(id)
+            .then(result => setCurrentPlace(result))
         }
             // service.getOne(id)
             // .then(result => setCurrentPlace(result))
@@ -85,6 +89,11 @@ const EditPlace = ({
         
         if(urlPlace.includes('place2a')){
             southAmericaService.edit(id, data)
+            .then(history.push(`/places/${urlPlace[2]}`))
+        }
+
+        if(urlPlace.includes('place1a')){
+            northAmericaService.edit(id, data)
             .then(history.push(`/places/${urlPlace[2]}`))
         }
     }
