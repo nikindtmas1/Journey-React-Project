@@ -22,20 +22,30 @@ const EditPlace = ({
    
     const [currentPlace, setCurrentPlace] = useState([]);
 
-    let service;
+    // let service;
 
-    if (urlPlace.includes('place4a')) {
-        service = asiaService;
-    }else if(urlPlace.includes('place5a')){
-        service = africaService;
-    }else if(urlPlace.includes('place3a')){
-        service = europeService;
-    }
+    // if (urlPlace.includes('place4a')) {
+    //     service = asiaService;
+    // }else if(urlPlace.includes('place5a')){
+    //     service = africaService;
+    // }else if(urlPlace.includes('place3a')){
+    //     service = europeService;
+    // }
 
     useEffect(() => {
-       
-            service.getOne(id)
+
+        if (urlPlace.includes('place4a')) {
+            asiaService.getOne(id)
             .then(result => setCurrentPlace(result))
+        }else if(urlPlace.includes('place5a')){
+            africaService.getOne(id)
+            .then(result => setCurrentPlace(result))
+        }else if(urlPlace.includes('place3a')){
+            europeService.getOne(id, '/places/place3a')
+            .then(result => setCurrentPlace(result))
+        }
+            // service.getOne(id)
+            // .then(result => setCurrentPlace(result))
         
     }, []);
 
@@ -51,8 +61,23 @@ const EditPlace = ({
 
         let data = { title, highlight, imgUrl, price, gray }
 
-        service.edit(id, data)
-        .then(history.push(`/places/${urlPlace[2]}`))
+        if(urlPlace.includes('place4a')){
+            asiaService.edit(id, data)
+        .then(history.push(`/places/${urlPlace[2]}`));
+
+        }
+        
+        if(urlPlace.includes('place5a')){
+           africaService.edit(id, data)
+        .then(history.push(`/places/${urlPlace[2]}`));
+
+        }
+        
+        if(urlPlace.includes('place3a')){
+            europeService.edit(id,'/places/place3a', data)
+        .then(history.push(`/places/${urlPlace[2]}`));
+        }
+        
     }
     return (
         <Typography className='dm-com'>
