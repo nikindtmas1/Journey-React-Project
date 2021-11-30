@@ -20,6 +20,7 @@ import * as userServices from './components/Services/authService';
 
 import Details from './components/Details/Details';
 import EditDestination from './components/EditDestination/EditDestination';
+import EditPlace from './components/Places/EditPlace/EditPlace';
 import Logout from './components/Logout/Logout';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
@@ -53,6 +54,7 @@ function App() {
   };
 
   let path = useRouteMatch();
+ 
 
   return (
     <div className="tm-main-content" id="top">
@@ -66,6 +68,7 @@ function App() {
         <Route path="/destination" component={Destination} />
         <Route path="/journey/destinations/:id" component={Details} />
         <Route path="/edit/:id" component={EditDestination} />
+        <Route path={`/editPlace${path.path}`} component={EditPlace} />
         <Route path="/contact" component={Contact} />
         <Route path={`/demo${path.path}`} component={Demo} />
         <Route path="/addDestination" component={CreateDestination} />

@@ -30,8 +30,8 @@ const PlaceDetails = ({
               <h3 className="tm-recommended-title">{currentPlace.title}</h3>
               <p className="tm-text-highlight">{currentPlace.highlight}</p>
               <p className="tm-text-gray">{currentPlace.gray}</p>
-              <Link to={`/demo`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
-                <Link onClick={onDelete} to={``} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
+              <Link to={`/editPlace/place4a/${match.params.id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
+              <Link onClick={onDelete} to={``} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
             </div>
             <Link to={`/places/place4a`} className="tm-recommended-price-box">
               <p className="tm-recommended-price">{currentPlace.price}</p>
