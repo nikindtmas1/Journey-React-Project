@@ -1,10 +1,27 @@
+import { useState, useEffect } from 'react';
+import { Link ,useRouteMatch } from 'react-router-dom';
+
+import PlaceItem from '../PlaceItem/PlaceItem';
+import * as australiaService from '../../Services/australiaData';
+
 
 const SixthPlace = () => {
+
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+      australiaService.getAll()
+      .then(result => setPlaces(result))
+  }, []);
+  let path = useRouteMatch();
     return (
         <div className="tab-pane fade show active" id="6a">
+          <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
 
               <div className="tm-recommended-place-wrap">
-                <div className="tm-recommended-place">
+
+                {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {/* <div className="tm-recommended-place">
                   <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
                     <h3 className="tm-recommended-title">Hotel Australia</h3>
@@ -54,10 +71,10 @@ const SixthPlace = () => {
                     <p className="tm-recommended-price">$630</p>
                     <p className="tm-recommended-price-link">Continue Reading</p>
                   </a>
-                </div>
+                </div> */}
               </div>
 
-              <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a>
+              {/* <a href="#" className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a> */}
             </div>
     );
 };

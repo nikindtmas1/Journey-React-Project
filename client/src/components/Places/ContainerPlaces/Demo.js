@@ -4,6 +4,7 @@ import * as asiaService from '../../Services/asiasData';
 import * as africaService from '../../Services/africaData';
 import * as soutAmericaService from '../../Services/southAmericaData';
 import * as northAmericaService from '../../Services/northAmericaData';
+import * as australiaService from '../../Services/australiaData';
 
 import { Button } from '@mui/material';
 
@@ -31,7 +32,10 @@ const Demo = ({
 
         let data = { title, highlight, imgUrl, gray, price };
 
-        if(location.pathname == '/demo/places/place5a'){
+        if(location.pathname == '/demo/places/place6a'){
+            australiaService.create(data)
+            .then(history.push('/places/place6a'))
+        }else if(location.pathname == '/demo/places/place5a'){
             africaService.create(data)
             .then(history.push('/places/place5a'))
         }else if(location.pathname == '/demo/places/place4a'){
