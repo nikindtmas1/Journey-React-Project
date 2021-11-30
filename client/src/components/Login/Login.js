@@ -15,7 +15,7 @@ const Login = ({
 
        userService.login(username);
 
-        history.push('/');
+       history.push('/');
     };
     return (
         <div className="wrapper fadeInDown">

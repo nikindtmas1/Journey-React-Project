@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import * as authService from '../Services/authService';
 
 const Logout = ({
     onLogout,
-    history
+    
 }) => {
+
+  let history = useHistory();
 
     authService.logout();
     onLogout();
-    // history.push('/login')
-    return (
-      <Link to='/login' replace={history.push('/login')} />
-    );
+    history.push('/')
+    // return (
+    //   <Link to='/' replace={history.push('/')} />
+    // );
 };
 
 export default Logout;
