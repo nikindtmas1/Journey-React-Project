@@ -21,39 +21,39 @@ const EditPlace = ({
     let location = useLocation();
     let urlPlace = location.pathname.split('/');
 
-   let id = urlPlace[urlPlace.length - 1];
-  
-   
+    let id = urlPlace[urlPlace.length - 1];
+
+
     const [currentPlace, setCurrentPlace] = useState([]);
 
-   
+
 
     useEffect(() => {
 
-        if(urlPlace.includes('place7a')){
+        if (urlPlace.includes('place7a')) {
             antarticaService.getOne(id)
-            .then(result => setCurrentPlace(result))
-        }else if(urlPlace.includes('place6a')){
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place6a')) {
             australiaService.getOne(id)
-            .then(result => setCurrentPlace(result))
-        }else if (urlPlace.includes('place5a')) {
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place5a')) {
             africaService.getOne(id)
-            .then(result => setCurrentPlace(result))
-        }else if(urlPlace.includes('place4a')){
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place4a')) {
             asiaService.getOne(id)
-            .then(result => setCurrentPlace(result))
-        }else if(urlPlace.includes('place3a')){
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place3a')) {
             europeService.getOne(id, '/places/place3a')
-            .then(result => setCurrentPlace(result))
-        }else if (urlPlace.includes('place2a')){
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place2a')) {
             southAmericaService.getOne(id)
-            .then(result => setCurrentPlace(result))
-        }else if(urlPlace.includes('place1a')){
+                .then(result => setCurrentPlace(result))
+        } else if (urlPlace.includes('place1a')) {
             northAmericaService.getOne(id)
-            .then(result => setCurrentPlace(result))
+                .then(result => setCurrentPlace(result))
         }
-           
-        
+
+
     }, []);
 
     const onSubmit = (e) => {
@@ -68,66 +68,81 @@ const EditPlace = ({
 
         let data = { title, highlight, imgUrl, price, gray }
 
-        if(urlPlace.includes('place7a')){
+        if (urlPlace.includes('place7a')) {
             antarticaService.edit(id, data)
-            .then(history.push(`/places/${urlPlace[2]}`))
+                .then(history.push(`/places/${urlPlace[2]}`))
         }
 
-        if(urlPlace.includes('place6a')){
+        if (urlPlace.includes('place6a')) {
             australiaService.edit(id, data)
-            .then(history.push(`/places/${urlPlace[2]}`))
+                .then(history.push(`/places/${urlPlace[2]}`))
         }
 
-        if(urlPlace.includes('place5a')){
+        if (urlPlace.includes('place5a')) {
             africaService.edit(id, data)
-        .then(history.push(`/places/${urlPlace[2]}`));
+                .then(history.push(`/places/${urlPlace[2]}`));
 
         }
-        
-        if(urlPlace.includes('place4a')){
+
+        if (urlPlace.includes('place4a')) {
             asiaService.edit(id, data)
-        .then(history.push(`/places/${urlPlace[2]}`));
+                .then(history.push(`/places/${urlPlace[2]}`));
 
         }
-        
-        if(urlPlace.includes('place3a')){
-            europeService.edit(id,'/places/place3a', data)
-        .then(history.push(`/places/${urlPlace[2]}`));
+
+        if (urlPlace.includes('place3a')) {
+            europeService.edit(id, '/places/place3a', data)
+                .then(history.push(`/places/${urlPlace[2]}`));
         }
-        
-        if(urlPlace.includes('place2a')){
+
+        if (urlPlace.includes('place2a')) {
             southAmericaService.edit(id, data)
-            .then(history.push(`/places/${urlPlace[2]}`))
+                .then(history.push(`/places/${urlPlace[2]}`))
         }
 
-        if(urlPlace.includes('place1a')){
+        if (urlPlace.includes('place1a')) {
             northAmericaService.edit(id, data)
-            .then(history.push(`/places/${urlPlace[2]}`))
+                .then(history.push(`/places/${urlPlace[2]}`))
         }
     }
     return (
-        <Typography className='dm-com'>
-        <Container>
-            <div>
-                <h1 style={{
-                    textAlign: 'center',
-                    fontSize: '26px',
-                    fontWeight: '500',
+        <Typography >
+            <Container>
+                <div >
+                    <div className="form-group">
+                        <h1 style={{
+                            textAlign: 'center',
+                            fontSize: '26px',
+                            fontWeight: '500',
 
-                }}>Edit Place</h1>
-                <form onSubmit={onSubmit}>
-                    <input  type='text' name='title' defaultValue={currentPlace.title} />
-                    <input  type='text' name='highlight' defaultValue={currentPlace.highlight} />
-                    <input  type='text' name='imgUrl' defaultValue={currentPlace.imgUrl} />
-                    <input  type='text' name='price' defaultValue={currentPlace.price} />
-                    <textarea  type='text' name='gray' defaultValue={currentPlace.gray} ></textarea>
-                    <th />
-                    <input type='submit' />
-                    {/* <Button size='large'></Button> */}
-                </form>
-            </div>
-        </Container>
-    </Typography>
+                        }}>Edit Place</h1>
+
+                        <form onSubmit={onSubmit} method='post'>
+                            <div className="form-group">
+                                <input className="form-control" type='text' name='title' defaultValue={currentPlace.title} />
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" type='text' name='highlight' defaultValue={currentPlace.highlight} />
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" type='text' name='imgUrl' defaultValue={currentPlace.imgUrl} />
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" type='text' name='price' defaultValue={currentPlace.price} />
+                            </div>
+                            <div className="form-group">
+                                <textarea className="form-control" type='text' name='gray' defaultValue={currentPlace.gray} rows='5'></textarea>
+                            </div>
+                            <div className="form-group">
+                                <input type='submit' className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase" value='Edit' />
+                            </div>
+                            <th />
+                            {/* <Button size='large'></Button> */}
+                        </form>
+                    </div>
+                </div>
+            </Container>
+        </Typography>
     );
 };
 

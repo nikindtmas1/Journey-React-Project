@@ -61,21 +61,16 @@ const Demo = ({
     return (
         <Typography className='dm-com'>
             <Container>
-                <div>
-                    <h1 style={{
-                        textAlign: 'center',
-                        fontSize: '26px',
-                        fontWeight: '500',
-
-                    }}>Create Place</h1>
-                    <form onSubmit={onSubmit}>
-                        <input placeholder='title' type='text' name='title' />
-                        <input placeholder='highlight' type='text' name='highlight' />
-                        <input placeholder='imgUrl' type='text' name='imgUrl' />
-                        <input placeholder='price' type='text' name='price' />
-                        <textarea placeholder='Description' type='text' name='gray' ></textarea>
+                <div className="wrapper fadeInDown">
+                    <h1 >Create Place</h1>
+                    <form onSubmit={onSubmit} method='post'>
+                        <input className="fadeIn firsth" placeholder='title' type='text' name='title' />
+                        <input className="fadeIn second" placeholder='highlight' type='text' name='highlight' />
+                        <input className="fadeIn third" placeholder='imgUrl' type='text' name='imgUrl' />
+                        <input className="fadeIn fourth" placeholder='price' type='text' name='price' />
+                        <textarea className="form-control" placeholder='Description' type='text' name='gray' rows="5" ></textarea>
                         <th />
-                        <input type='submit' />
+                        <input type='submit' className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase" />
                         {/* <Button size='large'></Button> */}
                     </form>
                 </div>
