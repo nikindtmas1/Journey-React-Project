@@ -5,6 +5,7 @@ import * as africaService from '../../Services/africaData';
 import * as soutAmericaService from '../../Services/southAmericaData';
 import * as northAmericaService from '../../Services/northAmericaData';
 import * as australiaService from '../../Services/australiaData';
+import * as antarticaService from '../../Services/antarticaData';
 
 import { Button } from '@mui/material';
 
@@ -32,7 +33,10 @@ const Demo = ({
 
         let data = { title, highlight, imgUrl, gray, price };
 
-        if(location.pathname == '/demo/places/place6a'){
+        if(location.pathname == '/demo/places/place7a'){
+            antarticaService.create(data)
+            .then(history.push('/places/place7a'))
+        }else if(location.pathname == '/demo/places/place6a'){
             australiaService.create(data)
             .then(history.push('/places/place6a'))
         }else if(location.pathname == '/demo/places/place5a'){
