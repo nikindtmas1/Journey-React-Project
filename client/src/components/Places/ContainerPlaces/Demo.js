@@ -1,4 +1,4 @@
-import { useRouteMatch, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import * as placeService from '../../Services/placesData';
 import * as asiaService from '../../Services/asiasData';
 import * as africaService from '../../Services/africaData';
@@ -7,11 +7,11 @@ import * as northAmericaService from '../../Services/northAmericaData';
 import * as australiaService from '../../Services/australiaData';
 import * as antarticaService from '../../Services/antarticaData';
 
-import { Button } from '@mui/material';
+// import { Button } from '@mui/material';
 
 import { Container } from '@mui/material';
 import Typography from '@mui/material/Typography'
-import { fontSize } from '@mui/system';
+// import { fontSize } from '@mui/system';
 
 
 const Demo = ({
