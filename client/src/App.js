@@ -1,5 +1,6 @@
 import { Route, Switch, Redirect, useRouteMatch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import AuthCxt from './contexts/AuthCxt';
 
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -33,6 +34,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 function App() {
 
   const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
+  let path = useRouteMatch();
 
   useEffect(() => {
       let user = userServices.getUser();
@@ -57,42 +59,42 @@ function App() {
     })
   };
 
-  let path = useRouteMatch();
- 
 
   return (
-    <div className="tm-main-content" id="top">
-      <div className="tm-top-bar-bg"></div>
-      <Navigation {...userInfo} />
+    <AuthCxt.Provider value={{user: userInfo}}>
+      <div className="tm-main-content" id="top">
+        <div className="tm-top-bar-bg"></div>
+        <Navigation {...userInfo} />
 
-      <div className="tm-page-wrap mx-auto">
-        <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/home" component={Home} />
-        <Route path="/destination" component={Destination} />
-        <Route path="/journey/destinations/:id" component={Details} />
-        <Route path="/edit/:id" component={EditDestination} />
-        <Route path={`/editPlace${path.path}`} component={EditPlace} />
-        <Route path="/contact" component={Contact} />
-        <Route path={`/demo${path.path}`} component={Demo} />
-        <Route path="/addDestination" component={CreateDestination} />
-        <Route path='/login' component={Login} onLogin={onLogin} />
-        <Route path='/register' component={Register} />
-        {/* <Demo path='/demo' component={Demo} /> */}
-        <Route path="/logout" component={Logout} onLogout={onLogout} />
-        <Route path="/places" component={Places} />
-        <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
-        <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />
-        <Route path={`/journey/places/place3a/:id`} component={EuropePlacesDetails} />
-        <Route path={`/journey/southAmericas/:id`} component={SouthAmericaDetails} />
-        <Route path={`/journey/northAmericas/:id`} component={NorthAmericaDetails} />
-        <Route path={`/journey/australias/:id`} component={AustraliaDetails} />
-        <Route path={`/journey/antarticas/:id`} component={AntarticaDetails} />
-        <Route path='*' component={ErrorPage} />
-        </Switch>
-        <Footer />
+        <div className="tm-page-wrap mx-auto">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/destination" component={Destination} />
+            <Route path="/journey/destinations/:id" component={Details} />
+            <Route path="/edit/:id" component={EditDestination} />
+            <Route path={`/editPlace${path.path}`} component={EditPlace} />
+            <Route path="/contact" component={Contact} />
+            <Route path={`/demo${path.path}`} component={Demo} />
+            <Route path="/addDestination" component={CreateDestination} />
+            <Route path='/login' component={Login} onLogin={onLogin} />
+            <Route path='/register' component={Register} />
+            {/* <Demo path='/demo' component={Demo} /> */}
+            <Route path="/logout" component={Logout} onLogout={onLogout} />
+            <Route path="/places" component={Places} />
+            <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
+            <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />
+            <Route path={`/journey/places/place3a/:id`} component={EuropePlacesDetails} />
+            <Route path={`/journey/southAmericas/:id`} component={SouthAmericaDetails} />
+            <Route path={`/journey/northAmericas/:id`} component={NorthAmericaDetails} />
+            <Route path={`/journey/australias/:id`} component={AustraliaDetails} />
+            <Route path={`/journey/antarticas/:id`} component={AntarticaDetails} />
+            <Route path='*' component={ErrorPage} />
+          </Switch>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </AuthCxt.Provider>
   );
 }
 
