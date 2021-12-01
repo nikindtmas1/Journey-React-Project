@@ -33,8 +33,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
 
-  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
   let path = useRouteMatch();
+  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
 
   useEffect(() => {
       let user = userServices.getUser();
@@ -77,7 +77,8 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path={`/demo${path.path}`} component={Demo} />
             <Route path="/addDestination" component={CreateDestination} />
-            <Route path='/login' component={Login} onLogin={onLogin} />
+            <Route path='/login' component={Login} onLogin={onLogin} /> 
+            {/* onLogin={onLogin} */}
             <Route path='/register' component={Register} />
             {/* <Demo path='/demo' component={Demo} /> */}
             <Route path="/logout" component={Logout} onLogout={onLogout} />

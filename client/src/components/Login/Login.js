@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom'
 
-import * as userService from '../Services/authService';
+import * as userService from '../Services/data';
 
 const Login = ({
   
@@ -10,10 +10,10 @@ const Login = ({
     const onSubmit = (e) => {
         e.preventDefault();
         let formData = new FormData(e.currentTarget);
-        let username = formData.get('username');
-        let password = formData.get('password');
+        let username = formData.get('username').trim();
+        let password = formData.get('password').trim();
 
-       userService.login(username);
+       userService.login(username, password);
 
        history.push('/');
     };
