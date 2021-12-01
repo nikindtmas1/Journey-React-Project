@@ -17,6 +17,7 @@ import EuropePlacesDetails from './components/Places/PlacesDetails/EuropePlaceDe
 import SouthAmericaDetails from './components/Places/PlacesDetails/SouthAmericaDetails';
 import NorthAmericaDetails from './components/Places/PlacesDetails/NorthAmericaDetails';
 import AustraliaDetails from './components/Places/PlacesDetails/AustraliaDetails';
+import AntarticaDetails from './components/Places/PlacesDetails/AntarticaPlaceDetails';
 
 
 import * as userServices from './components/Services/authService';
@@ -86,6 +87,7 @@ function App() {
         <Route path={`/journey/southAmericas/:id`} component={SouthAmericaDetails} />
         <Route path={`/journey/northAmericas/:id`} component={NorthAmericaDetails} />
         <Route path={`/journey/australias/:id`} component={AustraliaDetails} />
+        <Route path={`/journey/antarticas/:id`} component={AntarticaDetails} />
         <Route path='*' component={ErrorPage} />
         </Switch>
         <Footer />
