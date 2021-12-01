@@ -16,6 +16,8 @@ const SecondPlace = () => {
   let path = useRouteMatch();
     return (
         <div className="tab-pane fade show active" id="2a">
+          <h3>South America</h3>
+
           <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
 
               <div className="tm-recommended-place-wrap">

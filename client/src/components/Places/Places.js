@@ -9,15 +9,10 @@ import SeventhPlace from './ContainerPlaces/SeventhPlace';
 
 
 import PlacesNavigation from './ContainerPlaces/PlacesNavigation';
-//import Demo from './ContainerPlaces/Demo';
 
 const Places = ({
   match
 }) => {
-
-//  const onClickHandler = (e) => {
-//    e.preventDefault();
-//  }
 
     const { path } = useRouteMatch();
 
@@ -35,9 +30,6 @@ const Places = ({
             <Route path={`${path}/place6a`} component={SixthPlace} />
             <Route path={`${path}/place7a`} component={SeventhPlace} />
             </Switch>
-
-          
-           {/* <FourtPlace /> */}
           </div>
         </div>
     );

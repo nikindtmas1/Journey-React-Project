@@ -137,7 +137,6 @@ const EditPlace = ({
                                 <input type='submit' className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase" value='Edit' />
                             </div>
                             <th />
-                            {/* <Button size='large'></Button> */}
                         </form>
                     </div>
                 </div>

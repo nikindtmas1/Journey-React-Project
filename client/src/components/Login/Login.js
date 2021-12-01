@@ -22,9 +22,7 @@ const Login = ({
             <div id="formContent">
 
                 <h2 className="active"> Sign In </h2>
-                {/* <h2 className="inactive underlineHover">Sign Up </h2> */}
-
-
+           
                 <div className="fadeIn first">
                     <img src="/img/logo.png" id="icon" alt="User Icon" />
                 </div>

@@ -17,6 +17,7 @@ const FifthPlace = () => {
 
     return (
         <div className="tab-pane fade show active" id="5a">
+          <h3>Africa</h3>
             <Link to={`/demo${path.path}`} className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
               <div className="tm-recommended-place-wrap">
 

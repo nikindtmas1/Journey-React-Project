@@ -23,6 +23,8 @@ let path = useRouteMatch();
 
     return (
         <div className="tab-pane fade show active" id="3a">
+          <h3>Europe</h3>
+
           <Link to={`/demo${path.path}`} className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
         <div className="tm-recommended-place-wrap">
 
