@@ -10,6 +10,7 @@ import * as europeService from '../../Services/placesData';
 import * as southAmericaService from '../../Services/southAmericaData';
 import * as northAmericaService from '../../Services/northAmericaData';
 import * as australiaService from '../../Services/australiaData';
+import * as antarticaService from '../../Services/antarticaData';
 
 
 const EditPlace = ({
@@ -29,7 +30,10 @@ const EditPlace = ({
 
     useEffect(() => {
 
-        if(urlPlace.includes('place6a')){
+        if(urlPlace.includes('place7a')){
+            antarticaService.getOne(id)
+            .then(result => setCurrentPlace(result))
+        }else if(urlPlace.includes('place6a')){
             australiaService.getOne(id)
             .then(result => setCurrentPlace(result))
         }else if (urlPlace.includes('place5a')) {
@@ -63,6 +67,11 @@ const EditPlace = ({
         let gray = formData.get('gray');
 
         let data = { title, highlight, imgUrl, price, gray }
+
+        if(urlPlace.includes('place7a')){
+            antarticaService.edit(id, data)
+            .then(history.push(`/places/${urlPlace[2]}`))
+        }
 
         if(urlPlace.includes('place6a')){
             australiaService.edit(id, data)
