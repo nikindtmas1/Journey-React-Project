@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthCxt from '../../contexts/AuthCxt';
 
 const Navigation = ({
-    isAuthenticated,
-    user
+   
 }) => {
 
+    const value = useContext(AuthCxt);
+    let user = value.user.user;
+    let isAuth = value.user.isAuthenticated
+  
     let guestNavigation = (
         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                             <ul className="navbar-nav ml-auto">
@@ -69,7 +74,7 @@ const Navigation = ({
                         <button type="button" id="nav-toggle" className="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        {isAuthenticated
+                        {isAuth
                         ? userNavigation
                         : guestNavigation
                         }
