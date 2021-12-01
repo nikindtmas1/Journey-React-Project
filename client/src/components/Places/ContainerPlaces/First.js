@@ -7,13 +7,13 @@ import * as northAmericaService from '../../Services/northAmericaData';
 const FirstPlace = () => {
 
   const [places, setPlaces] = useState([]);
+  let path = useRouteMatch();
 
   useEffect(() => {
       northAmericaService.getAll()
       .then(result => setPlaces(result))
   }, []);
 
-  let path = useRouteMatch();
   return (
     <div className="tab-pane fade show active"  id="1a">
           <h3>North America</h3>

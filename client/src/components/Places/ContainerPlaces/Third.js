@@ -11,15 +11,14 @@ const ThirdPlace = ({
 }) => {
     
     const [places, setPlaces] = useState([]);
-    // const lasturl = match.path.split('/')[2];
-    // console.log(lasturl);
+    let path = useRouteMatch();
+
 
     useEffect(() => {
        placeService.getAll(match.path)
        .then(result => setPlaces(result));
     }, []);
 
-let path = useRouteMatch();
 
     return (
         <div className="tab-pane fade show active" id="3a">

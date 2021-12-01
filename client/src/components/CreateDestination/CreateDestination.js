@@ -1,8 +1,10 @@
 import * as createDestination from '../Services/data';
+import { useHistory } from 'react-router-dom';
 
 const CreateDestination = ({
-    history
+
 }) => {
+    let history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();

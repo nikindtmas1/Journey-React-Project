@@ -19,12 +19,13 @@ const EditPlace = ({
 
     let history = useHistory();
     let location = useLocation();
+    const [currentPlace, setCurrentPlace] = useState([]);
+    
     let urlPlace = location.pathname.split('/');
 
     let id = urlPlace[urlPlace.length - 1];
 
 
-    const [currentPlace, setCurrentPlace] = useState([]);
 
 
 

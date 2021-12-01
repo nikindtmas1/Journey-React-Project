@@ -8,12 +8,12 @@ import * as southAmericaService from '../../Services/southAmericaData';
 const SecondPlace = () => {
 
   const [places, setPlaces] = useState([]);
+  let path = useRouteMatch();
 
   useEffect(() => {
       southAmericaService.getAll()
       .then(result => setPlaces(result))
   }, []);
-  let path = useRouteMatch();
     return (
         <div className="tab-pane fade show active" id="2a">
           <h3>South America</h3>

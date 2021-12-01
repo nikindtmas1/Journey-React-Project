@@ -9,12 +9,12 @@ const FourtPlace = ({
 }) => {
 
   const [places, setPlaces] = useState([]);
+  let path = useRouteMatch();
 
   useEffect(() => {
       asiasService.getAll()
       .then(result => setPlaces(result))
   }, []);
-  let path = useRouteMatch();
 
  return (
         <div className="tab-pane fade show active" id="4a">

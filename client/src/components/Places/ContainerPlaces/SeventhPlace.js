@@ -7,12 +7,12 @@ import * as antarticaService from '../../Services/antarticaData';
 
 const SeventhPlace = () => {
   const [places, setPlaces] = useState([]);
+  let path = useRouteMatch();
 
   useEffect(() => {
       antarticaService.getAll()
       .then(result => setPlaces(result))
   }, []);
-  let path = useRouteMatch();
 
     return (
         <div className="tab-pane fade show active" id="7a">
