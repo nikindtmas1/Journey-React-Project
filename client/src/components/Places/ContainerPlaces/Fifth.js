@@ -1,13 +1,16 @@
-import { useState, useEffect}  from 'react';
+import { useState, useEffect, useContext}  from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 
+import AuthCxt from '../../../contexts/AuthCxt';
 import * as africaService from '../../Services/africaData';
 import PlaceItem from '../PlaceItem/PlaceItem';
 
 const FifthPlace = () => {
 
+  const value = useContext(AuthCxt);
+  let user = value.user.user;
+
   let path = useRouteMatch();
- 
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
@@ -15,10 +18,17 @@ const FifthPlace = () => {
     .then(result => setPlaces(result))
   },[]);
 
+  let loggedInUser = (
+    <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
+  );
+
     return (
         <div className="tab-pane fade show active" id="5a">
           <h3>Africa</h3>
-            <Link to={`/demo${path.path}`} className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
+          {user
+            ? loggedInUser
+            : null
+          }
               <div className="tm-recommended-place-wrap">
 
                 {places.map(x => <PlaceItem key={x._id} place={x} />)}
