@@ -56,7 +56,7 @@ const Details = ({
             ? ownerButtons
             : null
             }
-           
+           <Link to={`/destination`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Back</Link>
         </div>
     </section>
     );
