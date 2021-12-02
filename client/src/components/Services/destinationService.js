@@ -83,7 +83,7 @@ export async function register(username, password) {
 
     sessionStorage.setItem('username', result.username);
     sessionStorage.setItem('authToken', result.accessToken);
-    // sessionStorage.setItem('refreshToken', result.refreshToken);
+    sessionStorage.setItem('refreshToken', result.refreshToken);
     sessionStorage.setItem('userId', result._id);
 
     return result;

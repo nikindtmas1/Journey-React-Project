@@ -1,15 +1,15 @@
 import { Link, useHistory } from 'react-router-dom';
-import * as authService from '../Services/authService';
+//import * as authService from '../Services/authService';
+import * as authService from '../Services/data';
 
 const Logout = ({
-    onLogout,
     
 }) => {
 
   let history = useHistory();
 
-    authService.logout();
-    onLogout();
+    authService.logout()
+  
     history.push('/')
     // return (
     //   <Link to='/' replace={history.push('/')} />
