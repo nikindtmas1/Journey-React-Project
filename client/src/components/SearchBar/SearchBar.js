@@ -14,7 +14,7 @@ function SearchBar({
         let formData = new FormData(e.currentTarget);
         let destination = formData.get('destination');
         service.getAll()
-        .then(result => result.filter(x => x.name === destination))
+        .then(result => result.filter(x => x.name.toUpperCase() === destination.toUpperCase()))
         .then(currenSearch => history.push(`/journey/destinations/${currenSearch[0]._id}`))
      
     };
