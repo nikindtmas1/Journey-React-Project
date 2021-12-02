@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
+
+import AuthCxt from '../../../contexts/AuthCxt';
 
 const PlaceItem = ({
     place,
     match
 }) => {
 
+  const value = useContext(AuthCxt);
+  let user = value.user.user;
   const path = useRouteMatch();
   
   let url = '/';
@@ -25,6 +30,24 @@ const PlaceItem = ({
     url = `/journey/northAmericas/${place._id}`
   }
 //console.log(match.path);
+
+
+
+let userButtons = (
+  <Link to={`${url}`} className="tm-recommended-price-box">
+    <p className="tm-recommended-price">{place.price}</p>
+    <p className="tm-recommended-price-link">Continue Reading</p>
+  </Link>
+);
+
+let guestButtons = (
+
+  <div className="tm-recommended-price-box">
+    <p className="tm-recommended-price">{place.price}</p>
+  </div>
+
+);
+
     return (
       
         <div className="tm-recommended-place">
@@ -34,10 +57,10 @@ const PlaceItem = ({
               <p className="tm-text-highlight">{place.highlight}</p>
               <p className="tm-text-gray">{place.gray}</p>
             </div>
-            <Link to={`${url}`} className="tm-recommended-price-box">
-              <p className="tm-recommended-price">{place.price}</p>
-              <p className="tm-recommended-price-link">Continue Reading</p>
-            </Link>
+            {user
+            ? userButtons
+            : guestButtons
+            }
           </div>
     );
 };
