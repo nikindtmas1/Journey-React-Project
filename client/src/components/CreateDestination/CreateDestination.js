@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import * as createDestination from '../Services/data';
 import { useHistory } from 'react-router-dom';
+
+import AuthCxt from '../../contexts/AuthCxt';
 
 const CreateDestination = ({
 
 }) => {
     let history = useHistory();
+    const value = useContext(AuthCxt);
+    let userId = value.user.userId;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,8 +20,10 @@ const CreateDestination = ({
         let imgOne = formData.get('imgOne');
         let imgTwo = formData.get('imgTwo');
         let imgThree = formData.get('imgThree');
+        let likes = 0;
+        let ownId = userId;
 
-        const data = { name, description, imgOne, imgTwo, imgThree }
+        const data = { name, description, imgOne, imgTwo, imgThree, likes, ownId }
 
         createDestination.create(data)
         .then(history.push('/destination'))

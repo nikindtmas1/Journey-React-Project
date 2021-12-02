@@ -1,33 +1,48 @@
+
 import { Link, useHistory } from 'react-router-dom';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import * as destinationService from '../Services/data';
+import AuthCxt from '../../contexts/AuthCxt';
 
 const DestinationItem = ({
     destination,
    
 }) => {
 
+    const value = useContext(AuthCxt);
+    let userId = value.user.userId;
 
-    const history = useHistory()
+    const history = useHistory();
     
-    const { name, description, imgOne, imgTwo, imgThree, likes } = destination;
+    const { name, description, imgOne, imgTwo, imgThree, ownId, likes } = destination;
 
     const [count, setCount] = useState(likes);
     
+    
     let counterLikes = (e) => {
         e.preventDefault()
-           setCount((count) => count + 1)
-       
-        editLikes()
-     }
+        if(userId !== ownId){
 
-     function editLikes(){
-        let data = { name, description, imgOne, imgTwo, imgThree, likes: count };
-        destinationService.edit(destination._id, data)
-        .then(history.push('/destination'))
+            setCount((count) => count + 1)
+            
+            let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: count };
+            
+             destinationService.edit(destination._id, data)
+             .then(history.push('/destination'))
+        }
+       
      }
-  
+   
+    
+    //  function editLikes(){
+    //     let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: count };
+    //     console.log(destination._id);
+        
+    //      destinationService.edit(destination._id, data)
+    //      .then(history.push('/destination'))
+    //  }
+    
 
     return (
         <section className="tm-slideshow-section">
@@ -40,10 +55,15 @@ const DestinationItem = ({
                 <h2 className="">{destination.name}</h2>
                 <p>{destination.description}</p>
                 <Link to={`/journey/destinations/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Continue Reading</Link>
+                <hr/>
+                <div>
                 <button
                     type='button'
-                    onClick={counterLikes}
-                >Likes  {count}</button>
+                    onClick={counterLikes} style={{borderRadius:6}}
+                >Like</button>
+                <span>    Likes:  {count}</span>
+                </div>
+                
             </div>
         </section>
     );

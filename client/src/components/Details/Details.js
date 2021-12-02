@@ -29,6 +29,7 @@ const Details = ({
     };
 
     let ownId = destination.ownId;
+    console.log(ownId);
     let isOwner = false;
    
     if(userId == ownId){
