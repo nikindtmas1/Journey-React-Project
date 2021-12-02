@@ -21,7 +21,7 @@ const DestinationItem = ({
     
     
     let counterLikes = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         if(userId !== ownId){
 
             setCount((count) => count + 1)

@@ -56,13 +56,13 @@ function App() {
   //   });
   // };
 
-  // const onLogout = () => {
-  //   setUserInfo({
-  //     isAuthenticated: false,
-  //     user: null
-  //   })
+  const onLogout = () => {
+    setUserInfo({
+      isAuthenticated: false,
+      user: null
+    })
   
-  // };
+  };
 
 
   return (
@@ -86,7 +86,7 @@ function App() {
             {/* onLogin={onLogin} */}
             <Route path='/register' component={Register} />
             {/* <Demo path='/demo' component={Demo} /> */}
-            <Route path="/logout" component={Logout} />
+            <Route path="/logout" component={Logout} onLogout={onLogout}/>
             <Route path="/places" component={Places} />
             <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
             <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />

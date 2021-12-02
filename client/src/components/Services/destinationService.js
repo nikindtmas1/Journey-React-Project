@@ -89,12 +89,18 @@ export async function register(username, password) {
     return result;
 }
 
-export async function logout() {
-    const result = await get(settings.host + '/users/logout');
+export async function logout(token) {
+    const result = await get(settings.host + '/users/logout', {
+        headers:{'X-Authorization': token}
+    });
 
-    sessionStorage.removeItem('username');
-    sessionStorage.removeItem('authToken');
-    sessionStorage.removeItem('userId');
+    // sessionStorage.removeItem('username');
+    // sessionStorage.removeItem('authToken');
+    // sessionStorage.removeItem('userId');
 
-    return result;
+    // return result;
 }
+
+// export async function logout(){
+
+// }
