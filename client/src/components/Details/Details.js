@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
+import AuthCxt from '../../contexts/AuthCxt';
 import * as service from '../Services/data';
 
 const Details = ({
@@ -9,6 +10,8 @@ const Details = ({
 }) => {
     
     let history = useHistory();
+    const value = useContext(AuthCxt);
+    let userId = value.user.userId;
     
     const [destination, setDestination] = useState({});
     
@@ -25,7 +28,19 @@ const Details = ({
       history.push('/destination');
     };
 
+    let ownId = destination.ownId;
+    let isOwner = false;
    
+    if(userId == ownId){
+      isOwner = true;
+    };
+
+    let ownerButtons = (
+        <>
+            <Link to={`/edit/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
+            <Link onClick={onDelete} to="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
+        </>
+    );
 
     return (
         <section className="tm-slideshow-section">
@@ -37,8 +52,10 @@ const Details = ({
         <div className="tm-slideshow-description tm-bg-primary">
             <h2 className="">{destination.name}</h2>
             <p>{destination.description}</p>
-            <Link to={`/edit/${destination._id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
-            <Link onClick={onDelete} to="" className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
+            {isOwner
+            ? ownerButtons
+            : null
+            }
            
         </div>
     </section>
