@@ -32,7 +32,7 @@ const PlaceDetails = ({
    
     if(userId == ownId){
       isOwner = true;
-    }
+    };
 
     let ownerButtons = (
       <>
