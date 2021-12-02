@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import * as placeService from '../../Services/placesData';
 import * as asiaService from '../../Services/asiasData';
@@ -6,6 +7,7 @@ import * as soutAmericaService from '../../Services/southAmericaData';
 import * as northAmericaService from '../../Services/northAmericaData';
 import * as australiaService from '../../Services/australiaData';
 import * as antarticaService from '../../Services/antarticaData';
+import AuthCxt from '../../../contexts/AuthCxt';
 
 // import { Button } from '@mui/material';
 
@@ -19,7 +21,9 @@ const Demo = ({
 }) => {
     let history = useHistory();
     let location = useLocation();
-   
+    let value = useContext(AuthCxt);
+    let userId = value.user.userId;
+    let ownId = userId;
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -31,7 +35,7 @@ const Demo = ({
         let gray = formData.get('gray');
         let price = formData.get('price');
 
-        let data = { title, highlight, imgUrl, gray, price };
+        let data = { title, highlight, imgUrl, gray, price, ownId };
 
         if(location.pathname == '/demo/places/place7a'){
             antarticaService.create(data)

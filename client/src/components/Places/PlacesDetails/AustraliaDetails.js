@@ -33,7 +33,7 @@ const PlaceDetails = ({
               <Link to={`/editPlace/place6a/${match.params.id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
               <Link onClick={onDelete} to={``} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
             </div>
-            <Link to={`/places/place4a`} className="tm-recommended-price-box">
+            <Link to={`/places/place6a`} className="tm-recommended-price-box">
               <p className="tm-recommended-price">{currentPlace.price}</p>
               <p className="tm-recommended-price-link">Back to places page</p>
             </Link>

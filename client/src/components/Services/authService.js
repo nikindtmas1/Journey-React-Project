@@ -9,9 +9,10 @@ export const getUser = () => {
     let userId = sessionStorage.getItem('userId')
     let userData = { username, userId }
 
-    return username;
+    //return username;
+    return userData;
 };
 
-export const logout = () => {
-    localStorage.removeItem('username');
-};
+// export const logout = () => {
+//     localStorage.removeItem('username');
+// };

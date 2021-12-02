@@ -35,31 +35,34 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 function App() {
 
   let path = useRouteMatch();
-  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''});
+  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: '', userId: ''});
 
   useEffect(() => {
-      let user = userServices.getUser();
+      let userData = userServices.getUser();
+      let user = userData.username;
+      let id = userData.userId;
 
       setUserInfo({
         isAuthenticated: Boolean(user),
-        user: user
+        user: user,
+        userId: id,
       })
   }, []);
 
-  const onLogin = (username) => {
-    setUserInfo({
-      isAuthenticated: true,
-      user: username
-    });
-  };
+  // const onLogin = (username) => {
+  //   setUserInfo({
+  //     isAuthenticated: true,
+  //     user: username
+  //   });
+  // };
 
-  const onLogout = () => {
-    // setUserInfo({
-    //   isAuthenticated: false,
-    //   user: null
-    // })
+  // const onLogout = () => {
+  //   setUserInfo({
+  //     isAuthenticated: false,
+  //     user: null
+  //   })
   
-  };
+  // };
 
 
   return (
@@ -79,7 +82,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path={`/demo${path.path}`} component={Demo} />
             <Route path="/addDestination" component={CreateDestination} />
-            <Route path='/login' component={Login} onLogin={onLogin} /> 
+            <Route path='/login' component={Login} /> 
             {/* onLogin={onLogin} */}
             <Route path='/register' component={Register} />
             {/* <Demo path='/demo' component={Demo} /> */}
