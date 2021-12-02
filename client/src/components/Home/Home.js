@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 
+import AuthCxt from "../../contexts/AuthCxt";
+
 const Home = () => {
+
+    const value = useContext(AuthCxt);
+    let user = value.user.user;
+
     return (
         <>
         <section className="tm-banner">
@@ -19,9 +26,12 @@ const Home = () => {
                             </div>                        
                         </div> 
                         <div className="row tm-banner-row" id="tm-section-search">
-
-                            <SearchBar />                           
-
+                        
+                        {user
+                        ? <SearchBar />
+                        : null
+                        }
+            
                         </div> 
                         <div className="tm-banner-overlay"></div>
                     </div>                     
