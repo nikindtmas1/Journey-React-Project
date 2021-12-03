@@ -21,15 +21,17 @@ const DestinationItem = ({
     
     
     let counterLikes = (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         if(userId !== ownId){
 
-            setCount((count) => count + 1)
+            setCount((count) => count + 1);
+            let newCount = count + 1;
             
-            let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: count };
+            let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: newCount };
             
              destinationService.edit(destination._id, data)
              .then(history.push('/destination'))
+           
         }
        
      }
