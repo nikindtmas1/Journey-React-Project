@@ -1,10 +1,29 @@
+import { useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 
 const PlacesNavigation = () => {
 
+ //const [isActive, setActive] = useState(false)
   const { url } = useRouteMatch();
 
+
+
+ 
+  // const toggleClass = () => {
+  //   setActive(!isActive)
+  // }
+ 
+  //className={isActive ? "tm-tab-link" : "tm-tab-link active"} onClick={toggleClass}
+
+  // useEffect(() => {
+  
+  //   return (
+  //     setActive(isActive)
+  //   )
+  // }, [])
+
     return (
+      
         <ul className="nav nav-pills tm-tabs-links">
             <li className="tm-tab-link-li">
               <Link  to={`${url}/place1a`} data-toggle="tab" onClick={() => {}} className="tm-tab-link">
@@ -25,7 +44,7 @@ const PlacesNavigation = () => {
               </Link>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place4a`} data-toggle="tab" className="tm-tab-link">
+              <Link  to={`${url}/place4a`} data-toggle="tab" className="tm-tab-link" >
                 <img src="/img/asia.png" alt="Image" className="img-fluid" />
                 Asia
               </Link>
