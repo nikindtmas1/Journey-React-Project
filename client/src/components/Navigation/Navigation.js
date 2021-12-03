@@ -57,7 +57,7 @@ const Navigation = ({
                                 <Link className="nav-link" to="/logout">Logout</Link>
                                 </li>
                             </ul>
-                            <span>Welcome: {user}</span>
+                            <span>Welcome: {user.toUpperCase()}</span>
 
                         </div>
     );
