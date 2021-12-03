@@ -12,6 +12,8 @@ const DestinationItem = ({
 
     const value = useContext(AuthCxt);
     let userId = value.user.userId;
+    let user = value.user.user;
+
 
     const history = useHistory();
     
@@ -22,17 +24,20 @@ const DestinationItem = ({
     
     let counterLikes = (e) => {
         e.preventDefault()
-        if(userId !== ownId){
+        if(user){
+            if(userId !== ownId){
 
-            setCount((count) => count + 1);
-            let newCount = count + 1;
-            
-            let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: newCount };
-            
-             destinationService.edit(destination._id, data)
-             .then(history.push('/destination'))
-           
+                setCount((count) => count + 1);
+                let newCount = count + 1;
+                
+                let data = { name, description, imgOne, imgTwo, imgThree, ownId, likes: newCount };
+                
+                 destinationService.edit(destination._id, data)
+                 .then(history.push('/destination'))
+               
+            }
         }
+        
        
      }
    
