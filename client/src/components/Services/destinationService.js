@@ -90,15 +90,14 @@ export async function register(username, password) {
 }
 
 export async function logout(token) {
-    const result = await get(settings.host + '/users/logout', {
-        headers:{'X-Authorization': token}
-    });
+    const result = await get(settings.host + '/users/logout');
 
-    // sessionStorage.removeItem('username');
-    // sessionStorage.removeItem('authToken');
-    // sessionStorage.removeItem('userId');
+    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('authToken');
+    sessionStorage.removeItem('refreshToken');
+    sessionStorage.removeItem('userId');
 
-    // return result;
+    return result;
 }
 
 // export async function logout(){

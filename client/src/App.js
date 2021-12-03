@@ -41,6 +41,7 @@ function App() {
       let userData = userServices.getUser();
       let user = userData.username;
       let id = userData.userId;
+      
 
       setUserInfo({
         isAuthenticated: Boolean(user),
