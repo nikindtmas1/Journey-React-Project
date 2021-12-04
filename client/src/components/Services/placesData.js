@@ -1,7 +1,8 @@
 import * as placeServices from '../Services/destinationService';
 
 //const host = 'http://localhost:3030';
-const host = 'http://localhost:5000';
+//const host = 'http://localhost:5000';
+const host = 'https://server-journey-project.herokuapp.com';
 placeServices.settings.host = host;
 
 
