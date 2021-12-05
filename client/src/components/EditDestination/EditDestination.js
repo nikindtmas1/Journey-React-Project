@@ -25,6 +25,10 @@ const EditDestination = ({
         let imgTwo = formData.get('imgTwo');
         let imgThree = formData.get('imgThree');
 
+        if( name == '' || description == '' || imgOne == '' || imgTwo == '' || imgThree == ''){
+            return alert('All fields are required!');
+        }
+
         const data = { name, description, imgOne, imgTwo, imgThree }
 
         //createDestination.create(data)
