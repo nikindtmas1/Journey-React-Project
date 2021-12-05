@@ -13,8 +13,12 @@ const Register = () => {
         let password = formData.get('password').trim();
         let rePass = formData.get('rePassword').trim();
 
+        if(username == '' || password == '' || rePass == ''){
+            return alert("All fields are required!");
+        }
+
         if(password !== rePass){
-            return history.push('/');
+            return alert("Password and rePassword must be equal!");
         }
 
         userService.register(username, password)
