@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import * as services from '../Services/contactData';
 import {useHistory } from 'react-router-dom';
+import AuthCxt from '../../contexts/AuthCxt';
 
 const Contact = () => {
 
     let history = useHistory();
+    let value = useContext(AuthCxt);
+    let userId = value.user.userId;
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -14,7 +18,7 @@ const Contact = () => {
         let subject = formData.get('subject').trim();
         let message = formData.get('message').trim();
 
-        let data = { name, email, subject, message };
+        let data = { name, email, subject, message, userId };
 
         services.create(data)
         .then(history.push('/home'));
