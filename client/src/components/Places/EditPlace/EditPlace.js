@@ -67,6 +67,10 @@ const EditPlace = ({
         let price = formData.get('price');
         let gray = formData.get('gray');
 
+        if( title == '' || highlight == '' || imgUrl == '' || gray == '' || price == ''){
+            return alert('All fields are required!');
+        }
+        
         let data = { title, highlight, imgUrl, price, gray }
 
         if (urlPlace.includes('place7a')) {
