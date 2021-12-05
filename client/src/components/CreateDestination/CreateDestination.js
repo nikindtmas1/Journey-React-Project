@@ -23,6 +23,10 @@ const CreateDestination = ({
         let likes = 0;
         let ownId = userId;
 
+        if( name == '' || description == '' || imgOne == '' || imgTwo == '' || imgThree == ''){
+            return alert('All fields are required!');
+        }
+
         const data = { name, description, imgOne, imgTwo, imgThree, likes, ownId }
 
         createDestination.create(data)
