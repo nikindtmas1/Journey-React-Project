@@ -18,6 +18,10 @@ const Contact = () => {
         let subject = formData.get('subject').trim();
         let message = formData.get('message').trim();
 
+        if( name == '' || email == '' || subject == '' || message == ''){
+            return alert('All fields are required!');
+        }
+        
         let data = { name, email, subject, message, userId };
 
         services.create(data)
