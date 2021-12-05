@@ -29,8 +29,7 @@ const Demo = ({
         let price = formData.get('price');
 
         if( title == '' || highlight == '' || imgUrl == '' || gray == '' || price == ''){
-                throw new Error('All fields is required')
-           // return (history.push('/error'))
+            return alert('All fields are required!');
         }
 
         let data = { title, highlight, imgUrl, gray, price, ownId };
