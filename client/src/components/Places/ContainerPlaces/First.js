@@ -4,6 +4,7 @@ import { Link ,useRouteMatch } from 'react-router-dom';
 import AuthCxt from '../../../contexts/AuthCxt';
 import PlaceItem from '../PlaceItem/PlaceItem';
 import * as northAmericaService from '../../Services/northAmericaData';
+import NoPlace from '../PlaceItem/NoPlace';
 
 const FirstPlace = () => {
 
@@ -30,7 +31,10 @@ const FirstPlace = () => {
           }
       <div className="tm-recommended-place-wrap">
 
-          {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="0"/>
+                }
         {/* <div className="tm-recommended-place">
           <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
           <div className="tm-recommended-description-box">

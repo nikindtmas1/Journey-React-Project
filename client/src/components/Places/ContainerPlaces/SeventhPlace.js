@@ -4,6 +4,7 @@ import { Link ,useRouteMatch } from 'react-router-dom';
 import AuthCxt from '../../../contexts/AuthCxt';
 import PlaceItem from '../PlaceItem/PlaceItem';
 import * as antarticaService from '../../Services/antarticaData';
+import NoPlace from '../PlaceItem/NoPlace';
 
 
 const SeventhPlace = () => {
@@ -32,7 +33,10 @@ const SeventhPlace = () => {
 
               <div className="tm-recommended-place-wrap">
 
-                {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="0000000"/>
+                }
                 {/* <div className="tm-recommended-place">
                   <img src="/img/tm-img-04.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">

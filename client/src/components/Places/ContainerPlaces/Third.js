@@ -6,6 +6,7 @@ import * as placeService from '../../Services/placesData';
 import AuthCxt from '../../../contexts/AuthCxt';
 import PlaceItem from '../PlaceItem/PlaceItem';
 
+import NoPlace from '../PlaceItem/NoPlace';
 
 const ThirdPlace = ({
   match
@@ -36,7 +37,10 @@ const ThirdPlace = ({
           }
         <div className="tm-recommended-place-wrap">
 
-          {places.map(x => <PlaceItem key={x._id} place={x}/>)}
+              {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="000"/>
+                }
 
           
         </div>

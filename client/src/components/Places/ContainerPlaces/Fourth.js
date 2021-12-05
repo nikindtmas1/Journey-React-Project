@@ -5,6 +5,8 @@ import AuthCxt from '../../../contexts/AuthCxt';
 import PlaceItem from '../PlaceItem/PlaceItem';
 import * as asiasService from '../../Services/asiasData';
 
+import NoPlace from '../PlaceItem/NoPlace';
+
 const FourtPlace = ({
   match
 }) => {
@@ -33,7 +35,10 @@ const FourtPlace = ({
           }
         <div className="tm-recommended-place-wrap">
 
-          {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="0000"/>
+                }
           {/* <div className="tm-recommended-place">
             <img src="/img/tm-img-06.jpg" alt="Image" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">

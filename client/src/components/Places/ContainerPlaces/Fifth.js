@@ -5,6 +5,8 @@ import AuthCxt from '../../../contexts/AuthCxt';
 import * as africaService from '../../Services/africaData';
 import PlaceItem from '../PlaceItem/PlaceItem';
 
+import NoPlace from '../PlaceItem/NoPlace';
+
 const FifthPlace = () => {
 
   const value = useContext(AuthCxt);
@@ -31,7 +33,10 @@ const FifthPlace = () => {
           }
               <div className="tm-recommended-place-wrap">
 
-                {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="00000"/>
+                }
                 {/* <div className="tm-recommended-place">
                   <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">

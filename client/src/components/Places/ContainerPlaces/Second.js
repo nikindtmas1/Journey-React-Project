@@ -5,6 +5,7 @@ import AuthCxt from '../../../contexts/AuthCxt';
 import PlaceItem from '../PlaceItem/PlaceItem';
 import * as southAmericaService from '../../Services/southAmericaData';
 
+import NoPlace from '../PlaceItem/NoPlace';
 
 const SecondPlace = () => {
 
@@ -31,8 +32,10 @@ const SecondPlace = () => {
             : null
             }
               <div className="tm-recommended-place-wrap">
-
-                {places.map(x => <PlaceItem key={x._id} place={x} />)}
+                {places.length > 0
+                ? places.map(x => <PlaceItem key={x._id} place={x} />)
+                : <NoPlace key="00"/>
+                }
                 {/* <div className="tm-recommended-place">
                   <img src="/img/tm-img-05.jpg" alt="Image" className="img-fluid tm-recommended-img" />
                   <div className="tm-recommended-description-box">
