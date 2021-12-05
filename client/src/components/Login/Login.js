@@ -1,11 +1,10 @@
 import { useHistory } from 'react-router-dom'
-
 import * as userService from '../Services/data';
 
 const Login = ({
   
 }) => {
-    let history = useHistory()
+    let history = useHistory();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -15,6 +14,10 @@ const Login = ({
 
         if(username == '' || password == ''){
             return alert("All fields are required!");
+        }
+        
+        if(username.length < 3){
+            return alert("Username input is invalid!");
         }
         
        userService.login(username, password);
@@ -33,7 +36,9 @@ const Login = ({
 
 
                 <form onSubmit={onSubmit} method="POST">
-                    <input type="text" id="login" className="fadeIn second" name="username" placeholder="login" />
+                    <div>
+                        <input type="text" id="login" className="fadeIn second" name="username" placeholder="login" />
+                    </div>
                     <input type="text" id="password" className="fadeIn third" name="password" placeholder="password" />
                     <input type="submit" className="fadeIn fourth" value="Log In" />
                 </form>

@@ -21,6 +21,10 @@ const Register = () => {
             return alert("Password and rePassword must be equal!");
         }
 
+        if(username.length < 3){
+            return alert("Username input is invalid!");
+        }
+        
         userService.register(username, password)
         .then(history.push('/login'));
 
