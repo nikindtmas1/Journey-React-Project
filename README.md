@@ -11,8 +11,9 @@ Student project
 - Github: [@NikolaiNikolaev](https://github.com/nikindtmas1)
 
 ## :eyes: Try it out
+**git clone**
 ```
-- git clone https://github.com/nikindtmas1/Journey-React-Project
+ https://github.com/nikindtmas1/Journey-React-Project
 ```
 **Client side**
 ```
