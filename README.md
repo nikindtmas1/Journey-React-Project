@@ -1,6 +1,6 @@
 # Journey-React-Project
 
-Students project
+Student project
 
 
 ## 👨 Author
