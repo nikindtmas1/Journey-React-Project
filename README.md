@@ -11,6 +11,12 @@ Student project
 - Github: [@NikolaiNikolaev](https://github.com/nikindtmas1)
 
 ## :eyes: Try it out
+
+# Try in public web
+
+https://react-project-journey.web.app/
+
+
 **git clone**
 ```
  https://github.com/nikindtmas1/Journey-React-Project
@@ -32,10 +38,6 @@ The server is deplyed on https://server-journey-project.herokuapp.com
 ```
 App use MongoDB Atlas
 ```
-
-# Try in public web
-
-https://react-project-journey.web.app/
 
 # Authentication
 
