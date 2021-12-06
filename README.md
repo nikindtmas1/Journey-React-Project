@@ -33,7 +33,7 @@ The server is deplyed on https://server-journey-project.herokuapp.com
 App use MongoDB Atlas
 ```
 
-# Try in public place
+# Try in public web
 
 https://react-project-journey.web.app/
 
