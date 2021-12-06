@@ -28,6 +28,11 @@ open new tab in brawser on localhost:3000
 The server is deplyed on https://server-journey-project.herokuapp.com
 ```
 
+**Data Base**
+```
+App use MongoDB Atlas
+```
+
 # Try in public place
 
 https://react-project-journey.web.app/
