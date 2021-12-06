@@ -36,7 +36,7 @@ The server is deplyed on https://server-journey-project.herokuapp.com
 
 **Data Base**
 ```
-App use MongoDB Atlas
+Server connected to MongoDB Atlas
 ```
 
 # Authentication
