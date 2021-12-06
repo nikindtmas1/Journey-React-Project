@@ -10,14 +10,14 @@ Student project
 - LinkedIn: [@NikolaiNikolaev](https://www.linkedin.com/in/nikolay-nikolaev-4555631a7/)
 - Github: [@NikolaiNikolaev](https://github.com/nikindtmas1)
 
-## :eyes: Try it out
-
 # Try in public web
 
 https://react-project-journey.web.app/
 
 
-**git clone**
+## :eyes: Try it out
+
+**Git clone**
 ```
  https://github.com/nikindtmas1/Journey-React-Project
 ```
