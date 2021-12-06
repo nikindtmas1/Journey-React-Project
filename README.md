@@ -20,9 +20,11 @@ npm install
 npm start
 open new tab in brawser on localhost:3000
 ```
-**In public place**
+**Try in public place**
 https://react-project-journey.web.app/
-
+```
+# Authentication
+```
 
 ## :pencil: License
 
