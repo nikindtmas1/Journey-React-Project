@@ -25,6 +25,7 @@ open new tab in brawser on localhost:3000
 ```
 **Server side**
 ```
+The server is deplyed on https://server-journey-project.herokuapp.com
 ```
 
 # Try in public place
