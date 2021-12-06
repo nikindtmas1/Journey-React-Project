@@ -13,7 +13,8 @@ Students project
 ## :eyes: Try it out
 
 ```
-## in public place - https://react-project-journey.web.app/
+** in public place **
+https://react-project-journey.web.app/
 git clone https://github.com/nikindtmas1/Journey-React-Project
 open new terminal
 cd client
