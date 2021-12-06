@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { NavLink, useRouteMatch } from 'react-router-dom';
 
 const PlacesNavigation = () => {
 
@@ -27,46 +27,46 @@ const PlacesNavigation = () => {
       
         <ul className="nav nav-pills tm-tabs-links">
             <li className="tm-tab-link-li">
-              <Link  to={`${url}/place1a`} data-toggle="tab" onClick={() => {}} className="tm-tab-link">
+              <NavLink  to={`${url}/place1a`} data-toggle="tab" onClick={() => {}} className="tm-tab-link">
                 <img src="/img/north-america.png" alt="Image" className="img-fluid" />
                 North America
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place2a`} data-toggle="tab" className="tm-tab-link">
+              <NavLink to={`${url}/place2a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/south-america.png" alt="Image" className="img-fluid" />
                 South America
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place3a`} data-toggle="tab" className="tm-tab-link">
+              <NavLink to={`${url}/place3a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/europe.png" alt="Image" className="img-fluid" />
                 Europe
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link  to={`${url}/place4a`} data-toggle="tab" className="tm-tab-link" >
+              <NavLink  to={`${url}/place4a`} data-toggle="tab" className="tm-tab-link" >
                 <img src="/img/asia.png" alt="Image" className="img-fluid" />
                 Asia
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place5a`} data-toggle="tab" className="tm-tab-link">
+              <NavLink to={`${url}/place5a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/africa.png" alt="Image" className="img-fluid" />
                 Africa
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place6a`} data-toggle="tab" className="tm-tab-link">
+              <NavLink to={`${url}/place6a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/australia.png" alt="Image" className="img-fluid" />
                 Australia
-              </Link>
+              </NavLink>
             </li>
             <li className="tm-tab-link-li">
-              <Link to={`${url}/place7a`} data-toggle="tab" className="tm-tab-link">
+              <NavLink to={`${url}/place7a`} data-toggle="tab" className="tm-tab-link">
                 <img src="/img/antartica.png" alt="Image" className="img-fluid" />
                 Antartica
-              </Link>
+              </NavLink>
             </li>
           </ul>
     );

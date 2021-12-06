@@ -8,8 +8,8 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="/https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
     <link rel="stylesheet" type="text/css" href="/css/datepicker.css"/>
     <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
@@ -83,22 +83,22 @@
 
             // Smooth scroll to search form
             $('.tm-down-arrow-link').click(function(){
-                $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+                $.scrollTo('tm-section-search', 300, {easing:'linear'});
             });
 
             // Date Picker in Search form
-            var pickerCheckIn = datepicker('#inputCheckIn');
-            var pickerCheckOut = datepicker('#inputCheckOut');
+            var pickerCheckIn = datepicker('inputCheckIn');
+            var pickerCheckOut = datepicker('inputCheckOut');
 
             // Update nav links on scroll
-            $('#tm-top-bar').singlePageNav({
+            $('.tm-top-bar').singlePageNav({
                 currentClass:'active',
                 offset: 60
             });
 
             // Close navbar after clicked
             $('.nav-link').click(function(){
-                $('#mainNav').removeClass('show');
+                $('mainNav').removeClass('show');
             });
 
             // Slick Carousel

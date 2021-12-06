@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthCxt from '../../contexts/AuthCxt';
 
@@ -14,21 +14,21 @@ const Navigation = ({
         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></Link>
+                                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/destination">Destinations</Link>
+                                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
                                 </li>
                               
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/places">Recommended Places</Link>
+                                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
                                 </li>
                                
                                 <li className="nav-item">
-                                <Link className="nav-link" to="/login">Login</Link>
+                                <NavLink className="nav-link" to="/login">Login</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                <Link className="nav-link" to="/register">Register</Link>
+                                <NavLink className="nav-link" to="/register">Register</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -39,22 +39,22 @@ const Navigation = ({
         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></Link>
+                                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/destination">Destinations</Link>
+                                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/addDestination">Create Destination</Link>
+                                    <NavLink className="nav-link" to="/addDestination">Create Destination</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/places">Recommended Places</Link>
+                                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">Contact Us</Link>
+                                    <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                <Link className="nav-link" to="/logout">Logout</Link>
+                                <NavLink className="nav-link" to="/logout">Logout</NavLink>
                                 </li>
                             </ul>
                             <span>Welcome: {user}</span>
@@ -67,11 +67,11 @@ const Navigation = ({
             <div className="container">
                 <div className="row">
                     <nav className="navbar navbar-expand-lg narbar-light">
-                        <Link className="navbar-brand mr-auto" to="/">
-                            <img src="img/logo.png" alt="Site logo" />
+                        <NavLink className="navbar-brand mr-auto" to="/">
+                            <img src="/img/logo.png" alt="Site logo" />
                             Journey
-                        </Link>
-                        <button type="button" id="nav-toggle" className="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        </NavLink>
+                        <button type="button" id="nav-toggle" className="navbar-toggler collapsed" data-toggle="collapse" data-target="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         {isAuth
