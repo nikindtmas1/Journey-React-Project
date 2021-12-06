@@ -50,17 +50,18 @@ function App() {
       })
   }, []);
 
-  // const onLogin = (username) => {
-  //   setUserInfo({
-  //     isAuthenticated: true,
-  //     user: username
-  //   });
-  // };
+  const onLogin = (username) => {
+    setUserInfo({
+      isAuthenticated: true,
+      user: username
+    });
+  };
 
   const onLogout = () => {
     setUserInfo({
       isAuthenticated: false,
-      user: null
+      user: null,
+      userId: null
     })
   
   };
@@ -83,11 +84,11 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path={`/demo${path.path}`} component={Demo} />
             <Route path="/addDestination" component={CreateDestination} />
-            <Route path='/login' component={Login} /> 
+            <Route path='/login'><Login onLogin={onLogin}></Login></Route> 
             {/* onLogin={onLogin} */}
             <Route path='/register' component={Register} />
             {/* <Demo path='/demo' component={Demo} /> */}
-            <Route path="/logout" component={Logout} onLogout={onLogout}/>
+            <Route path="/logout" ><Logout onLogout={onLogout}></Logout></Route>
             <Route path="/places" component={Places} />
             <Route path={`/journey/africas/:id`} component={AfricaPlaceDetails} />
             <Route path={`/journey/asias/:id`} component={AsiaPlaceDetails} />

@@ -2,8 +2,11 @@ import { useHistory } from 'react-router-dom'
 import * as userService from '../Services/data';
 
 const Login = ({
-  
+    match,
+  onLogin
 }) => {
+    
+   console.log(onLogin);
     let history = useHistory();
 
     const onSubmit = (e) => {
@@ -21,7 +24,7 @@ const Login = ({
         }
         
        userService.login(username, password);
-
+       onLogin(username);
        history.push('/');
     };
     return (

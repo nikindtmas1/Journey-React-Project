@@ -5,7 +5,7 @@ import * as authService from '../Services/data';
 
 
 const Logout = ({
-    
+    onLogout
 }) => {
 
   let history = useHistory();
@@ -13,7 +13,7 @@ const Logout = ({
   useEffect(() => {
     authService.logout()
     .then(() => {
-
+      onLogout()
       history.push('/')
     })
   },[]);
