@@ -11,15 +11,19 @@ Student project
 - Github: [@NikolaiNikolaev](https://github.com/nikindtmas1)
 
 ## :eyes: Try it out
+- git clone https://github.com/nikindtmas1/Journey-React-Project
 **Client side**
 ```
-git clone https://github.com/nikindtmas1/Journey-React-Project
 open new terminal
 cd client
 npm install
 npm start
 open new tab in brawser on localhost:3000
 ```
+**Server side**
+```
+```
+
 # Try in public place
 
 https://react-project-journey.web.app/
