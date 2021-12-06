@@ -20,7 +20,7 @@ npm install
 npm start
 open new tab in brawser on localhost:3000
 ```
-** in public place **
+**In public place**
 https://react-project-journey.web.app/
 
 
