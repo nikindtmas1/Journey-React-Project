@@ -25,12 +25,12 @@ open new tab in brawser on localhost:3000
 https://react-project-journey.web.app/
 
 # Authentication
-```
+
 The app is initialized with three users, which can be used for immediate testing:
 - user: niki, password: asdasd123123
 - user: niki, password: asdasd
 - user: peter, password: 123123
-```
+
 
 ## :pencil: License
 
