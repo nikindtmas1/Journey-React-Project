@@ -1,9 +1,7 @@
 import { useHistory } from 'react-router-dom'
 import * as userService from '../Services/data';
 
-const Login = ({
-  onLogin
-}) => {
+const Login = () => {
     
     let history = useHistory();
 
@@ -13,7 +11,7 @@ const Login = ({
         let username = formData.get('username').trim();
         let password = formData.get('password').trim();
 
-        if(username == '' || password == ''){
+        if(username === '' || password === ''){
             return alert("All fields are required!");
         }
         

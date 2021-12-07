@@ -2,9 +2,7 @@
 import { useHistory } from 'react-router-dom';
 import * as service from '../Services/data';
 
-function SearchBar({
-   
-}){
+function SearchBar(){
     let history = useHistory()
  
 
@@ -14,7 +12,7 @@ function SearchBar({
         let formData = new FormData(e.currentTarget);
         let destination = formData.get('destination');
 
-        if( destination == ''){
+        if( destination === ''){
             return alert('All fields are required!');
         }
         service.getAll()

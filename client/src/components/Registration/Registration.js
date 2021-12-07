@@ -13,7 +13,7 @@ const Register = () => {
         let password = formData.get('password').trim();
         let rePass = formData.get('rePassword').trim();
 
-        if(username == '' || password == '' || rePass == ''){
+        if(username === '' || password === '' || rePass === ''){
             return alert("All fields are required!");
         }
 

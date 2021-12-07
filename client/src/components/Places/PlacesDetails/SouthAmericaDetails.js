@@ -10,11 +10,12 @@ const PlaceDetails = ({
     let history = useHistory();
     const value = useContext(AuthCxt);
     let userId = value.user.userId;
+    let id = match.params.id
 
     const [currentPlace, setCurrentPlace] = useState([]);
 
     useEffect(() => {
-      southAmericaServices.getOne(match.params.id)
+      southAmericaServices.getOne(id)
       .then(result => setCurrentPlace(result))
     },[]);
 
@@ -29,7 +30,7 @@ const PlaceDetails = ({
     let ownId = currentPlace.ownId;
     let isOwner = false;
    
-    if(userId == ownId){
+    if(userId === ownId){
       isOwner = true;
     };
 
@@ -42,7 +43,7 @@ const PlaceDetails = ({
 
     return (
         <div className="tm-recommended-place">
-            <img src={currentPlace.imgUrl} alt="Image" className="img-fluid tm-recommended-img" />
+            <img src={currentPlace.imgUrl} alt="" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">{currentPlace.title}</h3>
               <p className="tm-text-highlight">{currentPlace.highlight}</p>

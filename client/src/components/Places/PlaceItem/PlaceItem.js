@@ -14,19 +14,19 @@ const PlaceItem = ({
   
   let url = '/';
 
-  if(path.path == '/places/place7a'){
+  if(path.path === '/places/place7a'){
     url = `/journey/antarticas/${place._id}`
-  }else if(path.path == '/places/place6a'){
+  }else if(path.path === '/places/place6a'){
     url = `/journey/australias/${place._id}`
-  }else if(path.path == '/places/place5a'){
+  }else if(path.path === '/places/place5a'){
     url = `/journey/africas/${place._id}`
-  }else if(path.path == '/places/place4a'){
+  }else if(path.path === '/places/place4a'){
     url = `/journey/asias/${place._id}`
-  }else if (path.path == '/places/place3a'){
+  }else if (path.path === '/places/place3a'){
     url = `/journey/places/place3a/${place._id}`
-  }else if (path.path == '/places/place2a'){
+  }else if (path.path === '/places/place2a'){
     url = `/journey/southAmericas/${place._id}`
-  }else if (path.path == '/places/place1a'){
+  }else if (path.path === '/places/place1a'){
     url = `/journey/northAmericas/${place._id}`
   }
 //console.log(match.path);

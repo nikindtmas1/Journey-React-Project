@@ -67,7 +67,7 @@ const EditPlace = ({
         let price = formData.get('price');
         let gray = formData.get('gray');
 
-        if( title == '' || highlight == '' || imgUrl == '' || gray == '' || price == ''){
+        if( title === '' || highlight === '' || imgUrl === '' || gray === '' || price === ''){
             return alert('All fields are required!');
         }
         

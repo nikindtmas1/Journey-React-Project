@@ -30,7 +30,7 @@ const PlaceDetails = ({
     let ownId = currentPlace.ownId;
     let isOwner = false;
    
-    if(userId == ownId){
+    if(userId === ownId){
       isOwner = true;
     };
 
@@ -43,7 +43,7 @@ const PlaceDetails = ({
 
     return (
         <div className="tm-recommended-place">
-            <img src={currentPlace.imgUrl} alt="Image" className="img-fluid tm-recommended-img" />
+            <img src={currentPlace.imgUrl} alt="" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">{currentPlace.title}</h3>
               <p className="tm-text-highlight">{currentPlace.highlight}</p>
