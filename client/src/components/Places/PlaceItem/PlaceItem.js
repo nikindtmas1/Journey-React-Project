@@ -51,7 +51,7 @@ let guestButtons = (
     return (
       
         <div className="tm-recommended-place">
-            <img src={place.imgUrl} alt="Image" className="img-fluid tm-recommended-img" />
+            <img src={place.imgUrl} alt="" className="img-fluid tm-recommended-img" />
             <div className="tm-recommended-description-box">
               <h3 className="tm-recommended-title">{place.title}</h3>
               <p className="tm-text-highlight">{place.highlight}</p>

@@ -11,9 +11,7 @@ import SeventhPlace from './ContainerPlaces/SeventhPlace';
 
 import PlacesNavigation from './ContainerPlaces/PlacesNavigation';
 
-const Places = ({
-
-}) => {
+const Places = () => {
 
   
     const { path } = useRouteMatch();

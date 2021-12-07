@@ -30,20 +30,23 @@ async function request(url, options) {
     const options = {
         method,
         headers:{ 
+            //'Content-Type': 'application/json',
+            //'X-Authorization': token
             //'X-Parse-Application-Id': 'L3A2gZGIu7UpTKTKwO3yTGs4QS0j6JGEeR4qKv5U',
             //'X-Parse-REST-API-Key': 'sNs8wSD5FQtaOMFoGdxg5A4pNT5EmbCtFNrHvvsX'
         }
     }
   
-    // const token = sessionStorage.getItem('authToken');
+     const token = sessionStorage.getItem('authToken');
   
     // if (token != null) {
-  
+                //'X-Authorization' = token
     //     options.headers['X-Parse-Session-Token'] = token;
     // }
   
     if (body) {
         options.headers['Content-Type'] = 'application/json';
+        options.headers['X-Authorization'] = token;
         options.body = JSON.stringify(body);
     }
   
