@@ -18,7 +18,7 @@ const Contact = () => {
         let subject = formData.get('subject').trim();
         let message = formData.get('message').trim();
 
-        if( name == '' || email == '' || subject == '' || message == ''){
+        if( name === '' || email === '' || subject === '' || message === ''){
             return alert('All fields are required!');
         }
         
@@ -32,7 +32,7 @@ const Contact = () => {
         <>
         <div className="tm-container-outer tm-position-relative" id="tm-section-4">
                 <div className="tm-slideshow">
-                <img src="/img/tm-img-13.jpg" alt="Image" />
+                <img src="/img/tm-img-13.jpg" alt="" />
                 {/* <img src="img/tm-img-02.jpg" alt="Image" />
                 <img src="img/tm-img-03.jpg" alt="Image" />     */}
                

@@ -4,9 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import AuthCxt from '../../contexts/AuthCxt';
 
-const CreateDestination = ({
-
-}) => {
+const CreateDestination = () => {
     let history = useHistory();
     const value = useContext(AuthCxt);
     let userId = value.user.userId;
@@ -36,15 +34,12 @@ const CreateDestination = ({
     return (
         <div className="tm-container-outer" id="tm-section-2">
                 <div className="tm-slideshow">
-                <img src="/img/tm-img-16.jpg" alt="Image" />
-                {/* <img src="img/tm-img-02.jpg" alt="Image" />
-                <img src="img/tm-img-03.jpg" alt="Image" />     */}
+                <img src="/img/tm-img-16.jpg" alt="" />
+          
                 </div>
             
                 <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
-                    {/* <div className="form-group">
-                        <input type="text" id="contact_name" className="form-control" value="create destination"  required/>
-                    </div> */}
+                   
                     <div className="form-group">
                     <input type="text" id="contact_name" name="name" className="form-control" placeholder="Name"  required/>
                     </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import FirstPlace from './ContainerPlaces/First';
 import FourtPlace from './ContainerPlaces/Fourth';
@@ -12,12 +12,12 @@ import SeventhPlace from './ContainerPlaces/SeventhPlace';
 import PlacesNavigation from './ContainerPlaces/PlacesNavigation';
 
 const Places = ({
-  match
+
 }) => {
 
   
     const { path } = useRouteMatch();
-    let firstPath = path;
+   
 
 
     return (

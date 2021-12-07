@@ -9,9 +9,7 @@ import * as australiaService from '../../Services/australiaData';
 import * as antarticaService from '../../Services/antarticaData';
 import AuthCxt from '../../../contexts/AuthCxt';
 
-const Demo = ({
-
-}) => {
+const Demo = () => {
     let history = useHistory();
     let location = useLocation();
     let value = useContext(AuthCxt);
@@ -28,31 +26,31 @@ const Demo = ({
         let gray = formData.get('gray');
         let price = formData.get('price');
 
-        if( title == '' || highlight == '' || imgUrl == '' || gray == '' || price == ''){
+        if( title === '' || highlight === '' || imgUrl === '' || gray === '' || price === ''){
             return alert('All fields are required!');
         }
 
         let data = { title, highlight, imgUrl, gray, price, ownId };
 
-        if (location.pathname == '/demo/places/place7a') {
+        if (location.pathname === '/demo/places/place7a') {
             antarticaService.create(data)
                 .then(history.push('/places/place7a'))
-        } else if (location.pathname == '/demo/places/place6a') {
+        } else if (location.pathname === '/demo/places/place6a') {
             australiaService.create(data)
                 .then(history.push('/places/place6a'))
-        } else if (location.pathname == '/demo/places/place5a') {
+        } else if (location.pathname === '/demo/places/place5a') {
             africaService.create(data)
                 .then(history.push('/places/place5a'))
-        } else if (location.pathname == '/demo/places/place4a') {
+        } else if (location.pathname === '/demo/places/place4a') {
             asiaService.create(data)
                 .then(history.push('/places/place4a'))
-        } else if (location.pathname == '/demo/places/place3a') {
+        } else if (location.pathname === '/demo/places/place3a') {
             placeService.create(data, '/places/place3a')
                 .then(history.push('/places/place3a'))
-        } else if (location.pathname == '/demo/places/place2a') {
+        } else if (location.pathname === '/demo/places/place2a') {
             soutAmericaService.create(data)
                 .then(history.push('/places/place2a'))
-        } else if (location.pathname == '/demo/places/place1a') {
+        } else if (location.pathname === '/demo/places/place1a') {
             northAmericaService.create(data)
                 .then(history.push('/places/place1a'))
         }
@@ -62,7 +60,7 @@ const Demo = ({
     return (
         <div className="tm-container-outer tm-position-relative" id="tm-section-4">
             <div className="tm-slideshow">
-                <img src="/img/tm-img-14.jpg" alt="Image" />
+                <img src="/img/tm-img-14.jpg" alt="" />
                 <form onSubmit={onSubmit} method='post' className="tm-contact-form">
                     <input className="fadeIn firsth" placeholder='title' type='text' name='title' />
                     <input className="fadeIn second" placeholder='highlight' type='text' name='highlight' />
@@ -83,10 +81,6 @@ const Demo = ({
     );
 };
 
-function myStyles() {
-    Typography: {
 
-    }
-}
 
 export default Demo;

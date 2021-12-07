@@ -2,9 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthCxt from '../../contexts/AuthCxt';
 
-const Navigation = ({
-   
-}) => {
+const Navigation = () => {
 
     const value = useContext(AuthCxt);
     let user = value.user.user;

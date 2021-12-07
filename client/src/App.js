@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect, useRouteMatch } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AuthCxt from './contexts/AuthCxt';
 
@@ -54,10 +54,10 @@ function App() {
 
 
 const onLogin = (username) => {
+
   setUserInfo({
     user: username,
     isAuthenticated: userInfo.isAuthenticated
-   
   })
 };
 

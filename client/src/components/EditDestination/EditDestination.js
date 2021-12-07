@@ -25,29 +25,25 @@ const EditDestination = ({
         let imgTwo = formData.get('imgTwo');
         let imgThree = formData.get('imgThree');
 
-        if( name == '' || description == '' || imgOne == '' || imgTwo == '' || imgThree == ''){
+        if( name === '' || description === '' || imgOne === '' || imgTwo === '' || imgThree === ''){
             return alert('All fields are required!');
         }
 
         const data = { name, description, imgOne, imgTwo, imgThree }
 
-        //createDestination.create(data)
+       
         service.edit(match.params.id, data)
         .then(history.push('/destination'))
     };
     return (
         <div className="tm-container-outer" id="tm-section-2">
-                {/* <div id="google-map"></div> */}
+               
                 <div className="tm-slideshow">
-                <img src={currDestination.imgOne} alt="Image" />
-                {/* <img src="img/tm-img-02.jpg" alt="Image" />
-                <img src="img/tm-img-03.jpg" alt="Image" />     */}
+                <img src={currDestination.imgOne} alt="" />
+               
             </div>
                 <form onSubmit={handleSubmit} action="" method="POST" className="tm-contact-form">
-                    {/* <div className="form-group tm-name-container">
-                    </div>
-                    <div className="form-group tm-email-container">
-                    </div> */}
+                
 
                     <div className="form-group">
                     <input type="text" id="contact_name" name="name" className="form-control" defaultValue={currDestination.name} placeholder="Name"  required/>

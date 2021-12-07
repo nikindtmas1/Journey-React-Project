@@ -4,9 +4,7 @@ import * as userService from '../Services/data';
 
 import AuthCxt from '../../contexts/AuthCxt';
 
-const Login = ({
-
-}) => {
+const Login = () => {
     
     const {onLogin} = useContext(AuthCxt);
 
