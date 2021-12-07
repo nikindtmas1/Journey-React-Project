@@ -50,7 +50,7 @@ const EditPlace = () => {
         }
 
 
-    }, []);
+    }, [id]);
 
     const onSubmit = (e) => {
         e.preventDefault()

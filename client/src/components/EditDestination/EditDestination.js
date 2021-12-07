@@ -13,7 +13,7 @@ const EditDestination = ({
     useEffect(() => {
         service.getOne(match.params.id)
         .then(result => setCurrDestination(result))
-    }, []);
+    }, [match.params.id]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

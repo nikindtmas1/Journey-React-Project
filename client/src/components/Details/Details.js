@@ -18,7 +18,7 @@ const Details = ({
     useEffect(() => {
         service.getOne(match.params.id)
         .then(result => setDestination(result))
-    }, []);
+    }, [match.params.id]);
 
     const onDelete = async (e) => {
         e.preventDefault();

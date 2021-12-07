@@ -17,7 +17,7 @@ const PlaceDetails = ({
     useEffect(() => {
       southAmericaServices.getOne(id)
       .then(result => setCurrentPlace(result))
-    },[]);
+    },[id]);
 
     const onDelete = async (e) => {
         e.preventDefault();

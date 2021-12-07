@@ -21,7 +21,7 @@ const ThirdPlace = ({
     useEffect(() => {
        placeService.getAll(match.path)
        .then(result => setPlaces(result));
-    }, []);
+    }, [match.path]);
 
     let loggedInUser = (
       <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>

@@ -16,7 +16,7 @@ const PlaceDetails = ({
     useEffect(() => {
       africaServices.getOne(match.params.id)
       .then(result => setCurrentPlace(result))
-    },[]);
+    },[match.params.id]);
 
     const onDelete = async (e) => {
       e.preventDefault();

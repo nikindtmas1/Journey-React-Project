@@ -17,7 +17,7 @@ const PlaceDetails = ({
     useEffect(() => {
       europeServices.getOne(match.params.id, url)
       .then(result => setCurrentPlace(result))
-    },[]);
+    },[match.params.id, url]);
 
     const onDelete = async (e) => {
         e.preventDefault();
