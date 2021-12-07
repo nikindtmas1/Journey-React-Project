@@ -23,7 +23,7 @@ const CreateDestination = ({
         let likes = 0;
         let ownId = userId;
 
-        if( name == '' || description == '' || imgOne == '' || imgTwo == '' || imgThree == ''){
+        if( name === '' || description === '' || imgOne === '' || imgTwo === '' || imgThree === ''){
             return alert('All fields are required!');
         }
 
