@@ -29,7 +29,7 @@ const ThirdPlace = ({
 
     return (
         <div className="tab-pane fade show active" id="3a">
-          <h3>Europe</h3>
+          <h3 className="tm-recommended-title">Europe</h3>
 
           {user
             ? loggedInUser

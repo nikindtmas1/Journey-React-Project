@@ -24,7 +24,7 @@ const FirstPlace = () => {
 
   return (
     <div className="tab-pane fade show active"  id="1a">
-          <h3>North America</h3>
+          <h3 className="tm-recommended-title">North America</h3>
           {user
           ? userLoggedIn
           : null

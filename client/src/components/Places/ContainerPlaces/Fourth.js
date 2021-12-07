@@ -27,7 +27,7 @@ const FourtPlace = ({
 
  return (
         <div className="tab-pane fade show active" id="4a">
-          <h3>Asia</h3>
+          <h3 className="tm-recommended-title">Asia</h3>
 
           {user
             ? loggedInUser

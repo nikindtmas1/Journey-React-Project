@@ -13,9 +13,7 @@ import * as australiaService from '../../Services/australiaData';
 import * as antarticaService from '../../Services/antarticaData';
 
 
-const EditPlace = ({
-    match,
-}) => {
+const EditPlace = () => {
 
     let history = useHistory();
     let location = useLocation();
@@ -24,9 +22,6 @@ const EditPlace = ({
     let urlPlace = location.pathname.split('/');
 
     let id = urlPlace[urlPlace.length - 1];
-
-
-
 
 
     useEffect(() => {
@@ -72,6 +67,8 @@ const EditPlace = ({
         }
         
         let data = { title, highlight, imgUrl, price, gray }
+
+     
 
         if (urlPlace.includes('place7a')) {
             antarticaService.edit(id, data)

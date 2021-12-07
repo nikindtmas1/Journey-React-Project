@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import FirstPlace from './ContainerPlaces/First';
 import FourtPlace from './ContainerPlaces/Fourth';
@@ -14,12 +15,15 @@ const Places = ({
   match
 }) => {
 
+  
     const { path } = useRouteMatch();
+    let firstPath = path;
+
 
     return (
       <div className="tm-container-outer" id="tm-section-3">
           <PlacesNavigation />
-         
+            <div><h3 className="tm-recommended-title">Find Your Place</h3></div>
           <div className="tab-content clearfix">
             <Switch>
             <Route path={`${path}/place1a`} component={FirstPlace} />

@@ -25,7 +25,7 @@ const SeventhPlace = () => {
 
     return (
         <div className="tab-pane fade show active" id="7a">
-          <h3>Antartica</h3>
+          <h3 className="tm-recommended-title">Antartica</h3>
           {user
             ? loggedInUser
             : null
