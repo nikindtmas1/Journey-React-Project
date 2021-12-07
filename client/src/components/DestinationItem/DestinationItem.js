@@ -20,13 +20,15 @@ const DestinationItem = ({
     const { name, description, imgOne, imgTwo, imgThree, ownId, likes } = destination;
 
     const [count, setCount] = useState(likes);
-    
+    const [counter, setCounter] = useState(0);
     
     let counterLikes = (e) => {
         e.preventDefault()
         if(user){
             if(userId !== ownId){
 
+                if(counter < 1){
+                setCounter((counter) => counter + 1);
                 setCount((count) => count + 1);
                 let newCount = count + 1;
                 
@@ -34,6 +36,7 @@ const DestinationItem = ({
                 
                  destinationService.edit(destination._id, data)
                  .then(history.push('/destination'))
+                }
                
             }
         }

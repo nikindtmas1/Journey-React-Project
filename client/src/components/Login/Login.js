@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import { useHistory } from 'react-router-dom'
 import * as userService from '../Services/data';
 
+import AuthCxt from '../../contexts/AuthCxt';
+
 const Login = ({
-    onLogin
+
 }) => {
     
+    const {onLogin} = useContext(AuthCxt);
+
     let history = useHistory();
 
     const onSubmit = (e) => {
@@ -23,7 +28,7 @@ const Login = ({
         }
         
        userService.login(username, password);
-       //onLogin(username);
+       onLogin(username);
        history.push('/');
     };
 
