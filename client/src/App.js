@@ -48,7 +48,7 @@ function App() {
         user: user,
         userId: id,
       })
-  }, [userInfo]);
+  }, []);
 
  
  
