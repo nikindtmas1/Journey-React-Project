@@ -51,14 +51,15 @@ function App() {
   }, []);
 
  
- 
 
-  // const onLogin = (username) => {
-  //   setUserInfo({
-  //     isAuthenticated: true,
-  //     user: username
-  //   });
-  // };
+
+const onLogin = '';
+// (username) => {
+//   setUserInfo({
+//     isAuthenticated: true,
+//     user: username
+//   });
+// };
 
   const onLogout = () => {
     setUserInfo({
@@ -88,7 +89,7 @@ function App() {
             <Route path={`/demo${path.path}`} component={Demo} />
             <Route path="/addDestination" component={CreateDestination} />
             
-            <Route path='/login'><Login ></Login></Route> 
+            <Route path='/login'><Login onLogin={onLogin}></Login></Route> 
             {/* onLogin={onLogin} */}
             <Route path='/register' component={Register} />
             <Route path="/logout" ><Logout onLogout={onLogout}></Logout></Route>

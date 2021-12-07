@@ -5,8 +5,7 @@ import AuthCxt from '../../contexts/AuthCxt';
 import * as service from '../Services/data';
 
 const Details = ({
-    match,
-    // history
+    match
 }) => {
     
     let history = useHistory();
@@ -32,7 +31,7 @@ const Details = ({
   
     let isOwner = false;
    
-    if(userId == ownId){
+    if(userId === ownId){
       isOwner = true;
     };
 
