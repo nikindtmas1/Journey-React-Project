@@ -33,14 +33,11 @@ const Contact = () => {
         <div className="tm-container-outer tm-position-relative" id="tm-section-4">
                 <div className="tm-slideshow">
                 <img src="/img/tm-img-13.jpg" alt="" />
-                {/* <img src="img/tm-img-02.jpg" alt="Image" />
-                <img src="img/tm-img-03.jpg" alt="Image" />     */}
+               
                
                
                 <form onSubmit={onSubmit} action="index.html" method="post" className="tm-contact-form">
-                    {/* <div className="form-group">
-                        <input type="text" id="contact_subject" className="form-control" value="contact us"  required/>
-                    </div> */}
+                  
                     <div className="form-group">
                         <input type="text" id="contact_subject" name="name" className="form-control" placeholder="Name"  required/>
                     </div>
