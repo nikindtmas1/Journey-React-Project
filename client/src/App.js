@@ -53,11 +53,14 @@ function App() {
  
 
 
-const onLogin = (username) => {
-
+const onLogin = (userData) => {
+     
+      let user = userData.username;
+      let id = userData._id;
   setUserInfo({
-    user: username,
-    isAuthenticated: userInfo.isAuthenticated
+    user: user,
+    isAuthenticated: true,
+    userId: id,
   })
 };
 

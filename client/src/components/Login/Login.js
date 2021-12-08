@@ -25,8 +25,12 @@ const Login = () => {
             return alert("Username input is invalid!");
         }
         
-       userService.login(username, password);
-       onLogin(username);
+       userService.login(username, password)
+       .then(logData => {
+           console.log(logData);
+           onLogin(logData);
+       })
+       .catch(error => console.log(error))
        history.push('/');
     };
 
