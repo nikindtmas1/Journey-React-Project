@@ -13,11 +13,8 @@ import PlacesNavigation from './ContainerPlaces/PlacesNavigation';
 
 const Places = () => {
 
-  
     const { path } = useRouteMatch();
    
-
-
     return (
       <div className="tm-container-outer" id="tm-section-3">
           <PlacesNavigation />

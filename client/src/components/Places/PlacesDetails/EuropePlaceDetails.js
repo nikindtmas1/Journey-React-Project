@@ -7,58 +7,69 @@ import * as europeServices from '../../Services/placesData';
 const PlaceDetails = ({
   match
 }) => {
-    let history = useHistory();
-    const value = useContext(AuthCxt);
-    let userId = value.user.userId;
+  let history = useHistory();
+  const value = useContext(AuthCxt);
+  let userId = value.user.userId;
 
-    const [currentPlace, setCurrentPlace] = useState([]);
-    let url = '/places/place3a'
+  const [currentPlace, setCurrentPlace] = useState([]);
+  let url = '/places/place3a'
 
-    useEffect(() => {
-      europeServices.getOne(match.params.id, url)
+  useEffect(() => {
+    europeServices.getOne(match.params.id, url)
       .then(result => setCurrentPlace(result))
-    },[match.params.id, url]);
+      .catch(err => alert(err.message))
+  }, [match.params.id, url]);
 
-    const onDelete = async (e) => {
-        e.preventDefault();
-       await europeServices.deleteDestination(match.params.id, '/places/place3a')
-        //await asiaServices.deleteDestination(match.params.id);
-  
-        history.push('/places/place3a');
-    };
+  const onDelete = async (e) => {
+    e.preventDefault();
+    try {
+      await europeServices.deleteDestination(match.params.id, '/places/place3a')
+      //await asiaServices.deleteDestination(match.params.id);
 
-    let ownId = currentPlace.ownId;
-    let isOwner = false;
-   
-    if(userId === ownId){
-      isOwner = true;
-    };
+      history.push('/places/place3a');
 
-    let ownerButtons = (
-      <>
+    } catch (error) {
+      alert(error.message)
+      throw error
+    }
+    await europeServices.deleteDestination(match.params.id, '/places/place3a')
+    //await asiaServices.deleteDestination(match.params.id);
+
+    history.push('/places/place3a');
+  };
+
+  let ownId = currentPlace.ownId;
+  let isOwner = false;
+
+  if (userId === ownId) {
+    isOwner = true;
+  };
+
+  let ownerButtons = (
+    <>
       <Link to={`/editPlace/place3a/${match.params.id}`} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Edit</Link>
       <Link onClick={onDelete} to={``} className="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Delete</Link>
-      </>
-    );
+    </>
+  );
 
-    return (
-        <div className="tm-recommended-place">
-            <img src={currentPlace.imgUrl} alt="" className="img-fluid tm-recommended-img" />
-            <div className="tm-recommended-description-box">
-              <h3 className="tm-recommended-title">{currentPlace.title}</h3>
-              <p className="tm-text-highlight">{currentPlace.highlight}</p>
-              <p className="tm-text-gray">{currentPlace.gray}</p>
-              {isOwner
-                ? ownerButtons
-                : null
-              }
-            </div>
-            <Link to={`/places/place3a`} className="tm-recommended-price-box">
-              <p className="tm-recommended-price">{currentPlace.price}</p>
-              <p className="tm-recommended-price-link">Back to places page</p>
-            </Link>
-          </div>
-    );
+  return (
+    <div className="tm-recommended-place">
+      <img src={currentPlace.imgUrl} alt="" className="img-fluid tm-recommended-img" />
+      <div className="tm-recommended-description-box">
+        <h3 className="tm-recommended-title">{currentPlace.title}</h3>
+        <p className="tm-text-highlight">{currentPlace.highlight}</p>
+        <p className="tm-text-gray">{currentPlace.gray}</p>
+        {isOwner
+          ? ownerButtons
+          : null
+        }
+      </div>
+      <Link to={`/places/place3a`} className="tm-recommended-price-box">
+        <p className="tm-recommended-price">{currentPlace.price}</p>
+        <p className="tm-recommended-price-link">Back to places page</p>
+      </Link>
+    </div>
+  );
 };
 
 export default PlaceDetails;

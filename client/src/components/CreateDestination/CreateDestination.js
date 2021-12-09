@@ -21,44 +21,45 @@ const CreateDestination = () => {
         let likes = 0;
         let ownId = userId;
 
-        if( name === '' || description === '' || imgOne === '' || imgTwo === '' || imgThree === ''){
+        if (name === '' || description === '' || imgOne === '' || imgTwo === '' || imgThree === '') {
             return alert('All fields are required!');
         }
 
         const data = { name, description, imgOne, imgTwo, imgThree, likes, ownId }
 
         createDestination.create(data)
-        .then(history.push('/destination'))
+            .then(history.push('/destination'))
+            .catch(err => alert(err.message))
     };
 
     return (
         <div className="tm-container-outer" id="tm-section-2">
-                <div className="tm-slideshow">
+            <div className="tm-slideshow">
                 <img src="/img/tm-img-16.jpg" alt="" />
-          
-                </div>
-            
-                <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
-                   
-                    <div className="form-group">
-                    <input type="text" id="contact_name" name="name" className="form-control" placeholder="Name"  required/>
-                    </div>
-                    <div className="form-group">
-                    <textarea id="contact_message" name="description" className="form-control" rows="5" placeholder="Description" required></textarea>
-                    </div>
-                    <div className="form-group">
-                        <input type="text" id="contact_subject" name="imgOne" className="form-control" placeholder="Image One"  required/>
-                    </div>
-                    <div className="form-group">
-                        <input type="text" id="contact_subject" name="imgTwo" className="form-control" placeholder="Image Two"  required/>
-                    </div>
-                    <div className="form-group">
-                        <input type="text" id="contact_subject" name="imgThree" className="form-control" placeholder="Image Three"  required/>
-                    </div>
-                   
-                    <button type="submit" className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Add Destination Now</button>
-                </form>
+
             </div>
+
+            <form onSubmit={handleSubmit} action="index.html" method="POST" className="tm-contact-form">
+
+                <div className="form-group">
+                    <input type="text" id="contact_name" name="name" className="form-control" placeholder="Name" required />
+                </div>
+                <div className="form-group">
+                    <textarea id="contact_message" name="description" className="form-control" rows="5" placeholder="Description" required></textarea>
+                </div>
+                <div className="form-group">
+                    <input type="text" id="contact_subject" name="imgOne" className="form-control" placeholder="Image One" required />
+                </div>
+                <div className="form-group">
+                    <input type="text" id="contact_subject" name="imgTwo" className="form-control" placeholder="Image Two" required />
+                </div>
+                <div className="form-group">
+                    <input type="text" id="contact_subject" name="imgThree" className="form-control" placeholder="Image Three" required />
+                </div>
+
+                <button type="submit" className="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Add Destination Now</button>
+            </form>
+        </div>
     );
 };
 

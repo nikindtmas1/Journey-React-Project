@@ -7,57 +7,57 @@ const Navigation = () => {
     const value = useContext(AuthCxt);
     let user = value.user.user;
     let isAuth = value.user.isAuthenticated
-  
+
     let guestNavigation = (
         <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item">
-                                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
-                                </li>
-                              
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
-                                </li>
-                               
-                                <li className="nav-item">
-                                <NavLink className="nav-link" to="/login">Login</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                <NavLink className="nav-link" to="/register">Register</NavLink>
-                                </li>
-                            </ul>
-                        </div>
+            <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
+                </li>
+
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
+                </li>
+
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/login">Login</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/register">Register</NavLink>
+                </li>
+            </ul>
+        </div>
     );
 
     let userNavigation = (
-        
-        <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item">
-                                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/addDestination">Create Destination</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
-                                </li>
-                                <li className="nav-item">
-                                <NavLink className="nav-link" to="/logout">Logout</NavLink>
-                                </li>
-                            </ul>
-                            <span>Welcome: {user}</span>
 
-                        </div>
+        <div id="mainNav" className="collapse navbar-collapse tm-bg-white">
+            <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                    <NavLink className="nav-link active" to="/home">Home <span className="sr-only">(current)</span></NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/destination">Destinations</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/addDestination">Create Destination</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/places">Recommended Places</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+                </li>
+            </ul>
+            <span>Welcome: {user}</span>
+
+        </div>
     );
 
     return (
@@ -73,8 +73,8 @@ const Navigation = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         {isAuth
-                        ? userNavigation
-                        : guestNavigation
+                            ? userNavigation
+                            : guestNavigation
                         }
                     </nav>
                 </div>

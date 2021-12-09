@@ -7,7 +7,7 @@ const EditDestination = ({
     match
 }) => {
    
-
+ 
     const [currDestination, setCurrDestination] = useState([]);
 
     useEffect(() => {
@@ -31,7 +31,6 @@ const EditDestination = ({
 
         const data = { name, description, imgOne, imgTwo, imgThree }
 
-       
         service.edit(match.params.id, data)
         .then(history.push('/destination'))
     };

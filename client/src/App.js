@@ -27,42 +27,40 @@ import Details from './components/Details/Details';
 import EditDestination from './components/EditDestination/EditDestination';
 import EditPlace from './components/Places/EditPlace/EditPlace';
 import Logout from './components/Logout/Logout';
-//import Logout from './components/Services/data';
+
 import ErrorPage from './components/ErrorPage/ErrorPage';
-
-
 
 function App() {
 
   let path = useRouteMatch();
-  const [userInfo, setUserInfo] = useState({isAuthenticated: false, username: '', userId: ''});
+  const [userInfo, setUserInfo] = useState({ isAuthenticated: false, username: '', userId: '' });
 
   useEffect(() => {
-      let userData = userServices.getUser();
-      let user = userData.username;
-      let id = userData.userId;
-      
+    let userData = userServices.getUser();
+    let user = userData.username;
+    let id = userData.userId;
 
-      setUserInfo({
-        isAuthenticated: Boolean(user),
-        user: user,
-        userId: id,
-      })
+
+    setUserInfo({
+      isAuthenticated: Boolean(user),
+      user: user,
+      userId: id,
+    })
   }, []);
 
- 
 
 
-const onLogin = (userData) => {
-     
-      let user = userData.username;
-      let id = userData._id;
-  setUserInfo({
-    user: user,
-    isAuthenticated: true,
-    userId: id,
-  })
-};
+
+  const onLogin = (userData) => {
+
+    let user = userData.username;
+    let id = userData._id;
+    setUserInfo({
+      user: user,
+      isAuthenticated: true,
+      userId: id,
+    })
+  };
 
   const onLogout = () => {
     setUserInfo({
@@ -70,12 +68,12 @@ const onLogin = (userData) => {
       user: null,
       userId: null
     })
-  
+
   };
 
 
   return (
-    <AuthCxt.Provider value={{user: userInfo, onLogin}}>
+    <AuthCxt.Provider value={{ user: userInfo, onLogin }}>
       <div className="tm-main-content" id="top">
         <div className="tm-top-bar-bg"></div>
         <Navigation {...userInfo} />
@@ -91,9 +89,8 @@ const onLogin = (userData) => {
             <Route path="/contact" component={Contact} />
             <Route path={`/demo${path.path}`} component={Demo} />
             <Route path="/addDestination" component={CreateDestination} />
-            
-            <Route path='/login'><Login ></Login></Route> 
-            {/* onLogin={onLogin} */}
+
+            <Route path='/login'><Login ></Login></Route>
             <Route path='/register' component={Register} />
             <Route path="/logout" ><Logout onLogout={onLogout}></Logout></Route>
 

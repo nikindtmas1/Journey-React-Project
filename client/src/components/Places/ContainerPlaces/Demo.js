@@ -26,7 +26,7 @@ const Demo = () => {
         let gray = formData.get('gray');
         let price = formData.get('price');
 
-        if( title === '' || highlight === '' || imgUrl === '' || gray === '' || price === ''){
+        if (title === '' || highlight === '' || imgUrl === '' || gray === '' || price === '') {
             return alert('All fields are required!');
         }
 
@@ -35,23 +35,30 @@ const Demo = () => {
         if (location.pathname === '/demo/places/place7a') {
             antarticaService.create(data)
                 .then(history.push('/places/place7a'))
+                .catch(err => alert(err.message))
         } else if (location.pathname === '/demo/places/place6a') {
             australiaService.create(data)
                 .then(history.push('/places/place6a'))
+                .catch(err => alert(err.message))
         } else if (location.pathname === '/demo/places/place5a') {
             africaService.create(data)
+                .catch(err => alert(err.message))
                 .then(history.push('/places/place5a'))
         } else if (location.pathname === '/demo/places/place4a') {
             asiaService.create(data)
+                .catch(err => alert(err.message))
                 .then(history.push('/places/place4a'))
         } else if (location.pathname === '/demo/places/place3a') {
             placeService.create(data, '/places/place3a')
+                .catch(err => alert(err.message))
                 .then(history.push('/places/place3a'))
         } else if (location.pathname === '/demo/places/place2a') {
             soutAmericaService.create(data)
+                .catch(err => alert(err.message))
                 .then(history.push('/places/place2a'))
         } else if (location.pathname === '/demo/places/place1a') {
             northAmericaService.create(data)
+                .catch(err => alert(err.message))
                 .then(history.push('/places/place1a'))
         }
 
@@ -80,7 +87,5 @@ const Demo = () => {
 
     );
 };
-
-
 
 export default Demo;

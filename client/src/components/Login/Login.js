@@ -5,8 +5,8 @@ import * as userService from '../Services/data';
 import AuthCxt from '../../contexts/AuthCxt';
 
 const Login = () => {
-    
-    const {onLogin} = useContext(AuthCxt);
+
+    const { onLogin } = useContext(AuthCxt);
 
     let history = useHistory();
 
@@ -17,21 +17,20 @@ const Login = () => {
         let password = formData.get('password').trim();
 
 
-        if(username === '' || password === ''){
+        if (username === '' || password === '') {
             return alert("All fields are required!");
         }
-        
-        if(username.length < 3){
+
+        if (username.length < 3) {
             return alert("Username input is invalid!");
         }
-        
-       userService.login(username, password)
-       .then(logData => {
-           console.log(logData);
-           onLogin(logData);
-       })
-       .catch(error => console.log(error))
-       history.push('/');
+
+        userService.login(username, password)
+            .then(logData => {
+                onLogin(logData);
+            })
+            .catch(error => console.log(error))
+        history.push('/');
     };
 
     return (
@@ -39,7 +38,7 @@ const Login = () => {
             <div id="formContent">
 
                 <h2 className="active"> Sign In </h2>
-           
+
                 <div className="fadeIn first">
                     <img src="/img/logo.png" id="icon" alt="User Icon" />
                 </div>

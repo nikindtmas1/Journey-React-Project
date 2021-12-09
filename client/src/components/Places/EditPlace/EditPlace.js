@@ -18,7 +18,7 @@ const EditPlace = () => {
     let history = useHistory();
     let location = useLocation();
     const [currentPlace, setCurrentPlace] = useState([]);
-    
+
     let urlPlace = location.pathname.split('/');
 
     let id = urlPlace[urlPlace.length - 1];
@@ -29,24 +29,31 @@ const EditPlace = () => {
         if (urlPlace.includes('place7a')) {
             antarticaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place6a')) {
             australiaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place5a')) {
             africaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place4a')) {
             asiaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place3a')) {
             europeService.getOne(id, '/places/place3a')
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place2a')) {
             southAmericaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         } else if (urlPlace.includes('place1a')) {
             northAmericaService.getOne(id)
                 .then(result => setCurrentPlace(result))
+                .catch(err => alert(err.message))
         }
 
 
@@ -62,49 +69,54 @@ const EditPlace = () => {
         let price = formData.get('price');
         let gray = formData.get('gray');
 
-        if( title === '' || highlight === '' || imgUrl === '' || gray === '' || price === ''){
+        if (title === '' || highlight === '' || imgUrl === '' || gray === '' || price === '') {
             return alert('All fields are required!');
         }
-        
+
         let data = { title, highlight, imgUrl, price, gray }
 
-     
+
 
         if (urlPlace.includes('place7a')) {
             antarticaService.edit(id, data)
                 .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place6a')) {
             australiaService.edit(id, data)
                 .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place5a')) {
             africaService.edit(id, data)
-                .then(history.push(`/places/${urlPlace[2]}`));
-
+                .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place4a')) {
             asiaService.edit(id, data)
-                .then(history.push(`/places/${urlPlace[2]}`));
-
+                .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place3a')) {
             europeService.edit(id, '/places/place3a', data)
-                .then(history.push(`/places/${urlPlace[2]}`));
+                .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place2a')) {
             southAmericaService.edit(id, data)
                 .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
 
         if (urlPlace.includes('place1a')) {
             northAmericaService.edit(id, data)
                 .then(history.push(`/places/${urlPlace[2]}`))
+                .catch(err => alert(err.message))
         }
     }
     return (

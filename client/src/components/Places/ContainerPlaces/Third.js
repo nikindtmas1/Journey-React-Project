@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { Link, useRouteMatch} from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 import * as placeService from '../../Services/placesData';
 
@@ -11,43 +11,40 @@ import NoPlace from '../PlaceItem/NoPlace';
 const ThirdPlace = ({
   match
 }) => {
-    
-    const [places, setPlaces] = useState([]);
-    let path = useRouteMatch();
-    const value = useContext(AuthCxt);
-    let user = value.user.user;
+
+  const [places, setPlaces] = useState([]);
+  let path = useRouteMatch();
+  const value = useContext(AuthCxt);
+  let user = value.user.user;
 
 
-    useEffect(() => {
-       placeService.getAll(match.path)
-       .then(result => setPlaces(result));
-    }, [match.path]);
+  useEffect(() => {
+    placeService.getAll(match.path)
+      .then(result => setPlaces(result))
+      .catch(err => alert(err.message))
+  }, [match.path]);
 
-    let loggedInUser = (
-      <Link to={`/demo${path.path}`}className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
-    );
+  let loggedInUser = (
+    <Link to={`/demo${path.path}`} className="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Create Place</Link>
+  );
 
-    return (
-        <div className="tab-pane fade show active" id="3a">
-          <h3 className="tm-recommended-title">Europe</h3>
+  return (
+    <div className="tab-pane fade show active" id="3a">
+      <h3 className="tm-recommended-title">Europe</h3>
 
-          {user
-            ? loggedInUser
-            : null
-          }
-        <div className="tm-recommended-place-wrap">
+      {user
+        ? loggedInUser
+        : null
+      }
+      <div className="tm-recommended-place-wrap">
 
-              {places.length > 0
-                ? places.map(x => <PlaceItem key={x._id} place={x} />)
-                : <NoPlace key="000"/>
-                }
-
-          
-        </div>
-
-        
+        {places.length > 0
+          ? places.map(x => <PlaceItem key={x._id} place={x} />)
+          : <NoPlace key="000" />
+        }
       </div>
-    );
+    </div>
+  );
 };
 
 export default ThirdPlace;

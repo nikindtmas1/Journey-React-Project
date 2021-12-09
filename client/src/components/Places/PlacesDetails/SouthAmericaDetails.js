@@ -17,14 +17,21 @@ const PlaceDetails = ({
     useEffect(() => {
       southAmericaServices.getOne(id)
       .then(result => setCurrentPlace(result))
+      .catch(err => alert(err.message))
     },[id]);
 
     const onDelete = async (e) => {
         e.preventDefault();
-       
+       try {
         await southAmericaServices.deleteDestination(match.params.id);
   
         history.push('/places/place2a');
+
+       } catch (error) {
+         alert(error.message)
+         throw error
+       }
+        
     };
 
     let ownId = currentPlace.ownId;
