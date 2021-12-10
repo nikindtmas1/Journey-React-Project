@@ -30,9 +30,10 @@ const EditDestination = ({
         }
 
         const data = { name, description, imgOne, imgTwo, imgThree }
-
+        
         service.edit(match.params.id, data)
-        .then(history.push('/destination'))
+        .then(history.push(`/journey/destinations/${match.params.id}`))
+        .catch(err => alert(err.message))
     };
     return (
         <div className="tm-container-outer" id="tm-section-2">
